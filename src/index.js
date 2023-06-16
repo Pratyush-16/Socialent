@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { makeServer } from "./server";
 import { BrowserRouter } from 'react-router-dom';
+import { AuthContextProvider } from './frontend/context/AuthContext';
 
 // Call make Server
 makeServer();
@@ -13,7 +14,10 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
+    <AuthContextProvider>
     <App />
+    </AuthContextProvider>
+   
     </BrowserRouter>
     
   </React.StrictMode>
