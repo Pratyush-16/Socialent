@@ -6,9 +6,13 @@ export default function Login() {
 
     console.log(loginDetails)
 
+    const loginHandler =(e)=>{
+        const {name, value} = e.target;
+        setLoginDetails({...loginDetails,[name]: value})
+    }
     
-    const clickHandler = (event)=> {
-
+    const clickHandler = ()=> {
+        const {username, password} = loginDetails;
     }
 
 
@@ -19,6 +23,7 @@ export default function Login() {
         <input type='text' 
         name='username'
         value={loginDetails.username}
+        onChange={loginHandler}
         placeholder='username'/>
       </label>
 
@@ -26,10 +31,11 @@ export default function Login() {
         <input type='password'
         name='password'
         value={loginDetails.password}
+        onChange={loginHandler}
         placeholder='password' />
       </label>
 
-      <button onClick={()=>clickHandler()}>Submit</button>
+      <button onClick={clickHandler}>Submit</button>
       
       
     </div>
