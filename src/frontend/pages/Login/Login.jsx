@@ -1,11 +1,13 @@
 import React, { useContext, useState } from 'react'
 import { AuthContext } from '../../context/AuthContext'
+import { useNavigate } from 'react-router'
 
 export default function Login() {
 
     const[loginDetails, setLoginDetails] = useState({username:"" ,password:""})
 
     const{loginHandler} = useContext(AuthContext)
+    const navigate = useNavigate
 
     console.log(loginDetails)
 
@@ -18,10 +20,11 @@ export default function Login() {
 
     console.log(loginDetails)
     
-    const clickHandler =()=> {
+    const clickHandler =async ()=> {
         const {username, password} = loginDetails;
         // e.preventDefault();
-        loginHandler(username, password)
+      let result =await   loginHandler(username, password)
+      console.log("result",result);
     }
 
 
@@ -44,7 +47,7 @@ export default function Login() {
         placeholder='password' />
       </label>
 
-      <button onClick={()=> clickHandler()}>Submit</button>
+      <button onClick={clickHandler }>Submit</button>
       
       
     </div>
