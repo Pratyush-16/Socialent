@@ -1,5 +1,6 @@
 import axios from "axios";
 import { createContext, useState } from "react";
+import { useNavigate } from "react-router";
 
 export const AuthContext = createContext();
 
@@ -10,6 +11,8 @@ export const AuthContextProvider = ({ children }) => {
   const [user, setUser] = useState(localStorage?.user);
 
   console.log(token, "token");
+
+  const navigate = useNavigate()
 
   const loginHandler = async (username, password) => {
     console.log(username, password, "hello");
@@ -29,13 +32,43 @@ export const AuthContextProvider = ({ children }) => {
       setToken(result.data.encodedToken);
       setUser(result.data.userInfo);
       return true;
-      Navigate("/")
+     
 
     } catch (err) {
       console.log(err);
     }
   };
 
+  const signupHandler = async (firstName, lastName, email, password) => {
+    try {
+      const {
+        status,
+        data: { createdUser, encodedToken },
+      } = await axios.post("/api/auth/signup", {
+        firstName,
+        lastName,
+        email,
+        password,
+      });
+
+      if (status === 201 || status === 200) {
+        localStorage.setItem(
+          "login",
+          JSON.stringify({
+            token: encodedToken,
+            user: createdUser,
+          })
+        );
+        // toast.success("LogIn In Successfull");
+        setUser(createdUser);
+        setToken(encodedToken);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+   
 
 //   const signupHandler
 

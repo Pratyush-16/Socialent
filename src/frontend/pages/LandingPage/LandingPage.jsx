@@ -13,8 +13,8 @@ export default function LandingPage() {
         <h1>Welcome to MY Socials</h1>
 
         <div>
-            <button onClick={()=> navigate('/login')}>Join us</button>
-            <p onClick={()=> navigate('/signup')}>ALready have an account ?  Sign In</p>
+            <button onClick={()=> navigate('/signup')}>Join us</button>
+            <p onClick={()=> navigate('/login')}>ALready have an account ?  Sign In</p>
         </div>
       
     </div>
