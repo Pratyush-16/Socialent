@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { AuthContext } from '../../context/AuthContext'
 import { useNavigate } from 'react-router'
 import { Link } from 'react-router-dom'
+import "../Login/Login.css"
 
 export default function Login() {
 
@@ -43,7 +44,7 @@ export default function Login() {
 
 
   return (
-    <div>
+    <div  className='login-form-container'>
       
       <label htmlFor="UserName">UserName :
         <input type='text' 
