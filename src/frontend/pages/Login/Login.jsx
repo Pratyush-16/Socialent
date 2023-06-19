@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { AuthContext } from '../../context/AuthContext'
 import { useNavigate } from 'react-router'
+import { Link } from 'react-router-dom'
 
 export default function Login() {
 
@@ -37,6 +38,7 @@ export default function Login() {
         username: "adarshbalika",
         password: "adarshBalika123",
       }));
+      navigate('/home')
     };
 
 
@@ -61,7 +63,7 @@ export default function Login() {
 
       <button onClick={clickHandler }>Submit</button>
 
-      <button onClick={testLoginHandler} >Guest Login</button>
+      <button onClick={testLoginHandler}><Link to="/home">Guest Login</Link></button>
       
       
     </div>
