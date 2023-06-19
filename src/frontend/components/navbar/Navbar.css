@@ -1,0 +1,33 @@
+.navabr-main-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+
+}
+
+
+.title{
+    color: rgb(44, 44, 183);
+    font-size: 30px;
+  font-weight: bold; 
+    text-decoration: none; 
+}
+
+.navbar-links {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .navbar-links a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    transition: border-color 0.2s ease;
+  }
+  
+  .navbar-links a:hover {
+    border-color: #333;
+  }

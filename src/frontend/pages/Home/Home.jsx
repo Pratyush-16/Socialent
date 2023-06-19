@@ -20,7 +20,7 @@ export default function Home() {
       </div>
 
       <div>
-        <h1>Suggestion Followers</h1>
+        <h1>Main Feed</h1>
       </div>
     </div>
   )
