@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { AuthContext } from '../../context/AuthContext'
 import { useNavigate } from 'react-router'
 
@@ -7,7 +7,7 @@ export default function Login() {
     const[loginDetails, setLoginDetails] = useState({username:"" ,password:""})
 
     const{loginHandler} = useContext(AuthContext)
-    const navigate = useNavigate
+    const navigate = useNavigate;
 
     console.log(loginDetails)
 
@@ -18,7 +18,7 @@ export default function Login() {
        
     }
 
-    console.log(loginDetails)
+    // console.log(loginDetails)
     
     const clickHandler =async ()=> {
         const {username, password} = loginDetails;
@@ -26,6 +26,18 @@ export default function Login() {
       let result =await   loginHandler(username, password)
       console.log("result",result);
     }
+
+    useEffect (() => {
+      loginHandler(loginDetails.username, loginDetails.password);
+    }, [loginDetails.username, loginDetails.password]);
+
+    const testLoginHandler = () => {
+      setLoginDetails((prev) => ({
+        ...prev,
+        username: "adarshbalika",
+        password: "adarshBalika123",
+      }));
+    };
 
 
   return (
@@ -48,6 +60,8 @@ export default function Login() {
       </label>
 
       <button onClick={clickHandler }>Submit</button>
+
+      <button onClick={testLoginHandler} >Guest Login</button>
       
       
     </div>

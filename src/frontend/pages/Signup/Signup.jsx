@@ -6,41 +6,101 @@ export default function Signup() {
     firstName: "",
     lastName: "",
     email: "",
-    username: "",
+    userName: "",
     password: "",
     confirmPassword: "",
   });
 
   const { signUpHandler } = useContext(AuthContext);
 
+  const signUpClickHandler = (e) => {
+    const { name, value } = e.target;
+    setSignUpData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const clickHandler = async () => {
+    const { firstName, lastName, userName, email, password, confirmPassword } =
+      signUpData;
+    let result = await signUpHandler(
+      firstName,
+      lastName,
+      userName,
+      email,
+      password,
+      confirmPassword
+    );
+    console.log(result);
+  };
+
   return (
     <div>
-      <label htmlFor="UserName">
+      <label htmlFor="FirstName">
         FirstName :
-        <input type="text" name="username" placeholder="firstname" />
+        <input
+          type="text"
+          name="firstName"
+          placeholder="firstname"
+          value={signUpData.firstName}
+          onChange={signUpClickHandler}
+        />
       </label>
 
-      <label htmlFor="UserName">
+      <label htmlFor="LastName">
         LastName :
-        <input type="text" name="username" placeholder="lastname" />
+        <input
+          type="text"
+          name="lastName"
+          value={signUpData.lastName}
+          placeholder="lastname"
+          onChange={signUpClickHandler}
+        />
       </label>
 
       <label htmlFor="UserName">
         UserName :
-        <input type="text" name="username" placeholder="username" />
+        <input
+          type="text"
+          name="userName"
+          value={signUpData.userName}
+          placeholder="username"
+          onChange={signUpClickHandler}
+        />
       </label>
 
-      <label htmlFor="UserName">
+      <label htmlFor="Email">
+        Email :
+        <input
+          type="email"
+          name="email"
+          value={signUpData.email}
+          placeholder="email"
+          onChange={signUpClickHandler}
+        />
+      </label>
+
+      <label htmlFor="Password">
         Password :
-        <input type="text" name="username" placeholder="password" />
+        <input
+          type="text"
+          name="password"
+          value={signUpData.password}
+          placeholder="password"
+          onChange={signUpClickHandler}
+        />
       </label>
 
-      <label htmlFor="UserName">
-       Confirm Password :
-        <input type="text" name="username" placeholder=" confirm password" />
+      <label htmlFor="ConfirmPassword">
+        Confirm Password :
+        <input
+          type="text"
+          name="confirmPassword"
+          placeholder=" confirm password"
+          value={signUpData.confirmPassword}
+          onChange={signUpClickHandler}
+        />
       </label>
 
-      <button>Submit</button>
+      <button onClick={clickHandler}>Submit</button>
     </div>
   );
 }
