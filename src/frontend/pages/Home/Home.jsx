@@ -1,27 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Navbar } from '../../components/Navbar/Navbar'
+
+import { getAllPost } from '../../services/PostService'
+import PostCard from '../../components/PostCard/PostCard'
 
 
 export default function Home() {
-
+  
+ 
 
   return (
     <div>
         <div>
         <Navbar/>
         </div>
-
         <div>
-          <h1>Options</h1>
+          <PostCard/>
         </div>
-        
-      <div>
-        <h1>HomeFeed</h1>
-      </div>
 
-      <div>
-        <h1>Main Feed</h1>
-      </div>
+        
+    
     </div>
   )
 }

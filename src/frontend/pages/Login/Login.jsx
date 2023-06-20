@@ -22,11 +22,12 @@ export default function Login() {
 
     // console.log(loginDetails)
     
-    const clickHandler =async ()=> {
+    const clickHandler =async (e)=> {
         const {username, password} = loginDetails;
-        // e.preventDefault();
+         e.preventDefault();
       let result =await   loginHandler(username, password)
-      console.log("result",result);
+      //console.log("result",result);
+      navigate('/')
     }
 
     useEffect (() => {
