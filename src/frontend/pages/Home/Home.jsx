@@ -6,6 +6,8 @@ import PostCard from '../../components/PostCard/PostCard'
 
 
 export default function Home() {
+
+  // const {state:{posts,userProfile}} = use
   
  
 
@@ -14,9 +16,15 @@ export default function Home() {
         <div>
         <Navbar/>
         </div>
+
         <div>
-          <PostCard/>
+
         </div>
+
+        {/* <div className='post-main-container'>
+
+          <PostCard/>
+        </div> */}
 
         
     
