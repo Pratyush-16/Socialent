@@ -8,6 +8,8 @@ export const DataContextProvider = ({children}) => {
     const [state,dispatch] = useReducer(dataReducer, initialState)
     console.log(state,"state")
 
+    
+
 
     return(
 

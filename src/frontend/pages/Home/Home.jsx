@@ -8,11 +8,18 @@ import { DataContext } from '../../context/DataContext'
 
 export default function Home() {
 
-   const {state:{posts,userProfile}}= useContext(DataContext)
-   console.log(posts, userProfile)
+   const {posts,userProfile, dispatch}= useContext(DataContext)
+   console.log(posts, userProfile ,"userprofiles list")
+
+  
+
+  const allUsers = userProfile;
+  console.log(allUsers,"userprofiles")
+  
 
   //  const currentUserList =  userProfile?.following?.map((list)=>list.username)
   //  console.log(currentUserList ,"users")
+
   
  
 
@@ -21,6 +28,10 @@ export default function Home() {
         <div>
         <Navbar/>
         </div>
+
+        {/* <div>
+          {userProfile?.map(user) => }
+        </div> */}
 
         
         

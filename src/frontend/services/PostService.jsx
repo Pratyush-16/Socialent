@@ -9,3 +9,15 @@ export const getAllPost = async (dispatch) => {
     console.log(error);
   }
 };
+
+export const getAllUsers = async(dispatch) => {
+  try{
+    const result = await axios.get(`/api/users`);
+    console.log(result, "userslist");
+    dispatch({type: "Get_All_Users", value: getAllUsers?.data?.users,
+    })
+  }
+  catch (error) {
+    console.log(error);
+  }
+}
