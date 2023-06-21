@@ -1,13 +1,18 @@
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { Navbar } from '../../components/Navbar/Navbar'
 
 import { getAllPost } from '../../services/PostService'
 import PostCard from '../../components/PostCard/PostCard'
+import { DataContext } from '../../context/DataContext'
 
 
 export default function Home() {
 
-  // const {state:{posts,userProfile}} = use
+   const {state:{posts,userProfile}}= useContext(DataContext)
+   console.log(posts, userProfile)
+
+  //  const currentUserList =  userProfile?.following?.map((list)=>list.username)
+  //  console.log(currentUserList ,"users")
   
  
 
@@ -17,15 +22,7 @@ export default function Home() {
         <Navbar/>
         </div>
 
-        <div>
-
-        </div>
-
-        {/* <div className='post-main-container'>
-
-          <PostCard/>
-        </div> */}
-
+        
         
     
     </div>
