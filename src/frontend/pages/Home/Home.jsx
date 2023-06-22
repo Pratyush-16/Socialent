@@ -5,6 +5,7 @@ import { getAllPost } from '../../services/DataServices'
 import PostCard from '../../components/PostCard/PostCard'
 import { DataContext } from '../../context/DataContext'
 import PostList from '../../components/PostList/PostList'
+import AddPost from '../../components/AddPost/AddPost'
 
 
 export default function Home() {
@@ -21,6 +22,8 @@ export default function Home() {
 
   return (
     <div>
+
+      <AddPost/>
         
         <PostList postState={posts}/>
 
