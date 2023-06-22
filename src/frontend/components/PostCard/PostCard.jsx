@@ -35,8 +35,8 @@ export default function PostCard({post}) {
   );
 
   const isPostLiked = posts
-    .find((post) => post._id === postId)
-    .likes.likedBy.some((post) => post.username === userProfile?.username);
+    // .find((post) => post._id === postId)
+    // .likes.likedBy.some((post) => post.username === userProfile?.username);
 
   const postLikeHandler = (postId) => {
     // isPostLiked
