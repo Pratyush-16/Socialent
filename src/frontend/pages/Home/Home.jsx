@@ -1,39 +1,29 @@
 import React, { useContext, useEffect } from 'react'
 import { Navbar } from '../../components/Navbar/Navbar'
 
-import { getAllPost } from '../../services/PostService'
+import { getAllPost } from '../../services/DataServices'
 import PostCard from '../../components/PostCard/PostCard'
 import { DataContext } from '../../context/DataContext'
+import PostList from '../../components/PostList/PostList'
 
 
 export default function Home() {
 
-   const {posts,userProfile, dispatch}= useContext(DataContext)
-   console.log(posts, userProfile ,"userprofiles list")
+   const {state:{posts,userProfile,users}}= useContext(DataContext)
+   //console.log(posts, users , userProfile"userprofiles list")
 
   
 
-  const allUsers = userProfile;
-  console.log(allUsers,"userprofiles")
   
-
-  //  const currentUserList =  userProfile?.following?.map((list)=>list.username)
-  //  console.log(currentUserList ,"users")
 
   
  
 
   return (
     <div>
-        <div>
-        <Navbar/>
-        </div>
-
-        {/* <div>
-          {userProfile?.map(user) => }
-        </div> */}
-
         
+        <PostList postState={posts}/>
+
         
     
     </div>

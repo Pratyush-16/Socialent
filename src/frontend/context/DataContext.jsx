@@ -1,14 +1,25 @@
-import { createContext, useReducer } from "react";
+import { createContext, useContext, useEffect, useReducer } from "react";
 import { dataReducer, initialState, } from "../reducer/DataReducer";
+import { AuthContext } from "./AuthContext";
+import {getServerData } from "../services/DataServices";
 
 export const DataContext = createContext()
 
 export const DataContextProvider = ({children}) => {
 
     const [state,dispatch] = useReducer(dataReducer, initialState)
-    console.log(state,"state")
+    const {token, user} = useContext(AuthContext)
 
-    
+    console.log(user)
+
+
+    useEffect(() => {
+      
+        getServerData(dispatch,token, user)
+       
+    },[token, user])
+
+
 
 
     return(

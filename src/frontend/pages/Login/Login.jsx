@@ -9,7 +9,7 @@ export default function Login() {
     const[loginDetails, setLoginDetails] = useState({username:"" ,password:""})
 
     const{loginHandler} = useContext(AuthContext)
-    const navigate = useNavigate;
+    const navigate = useNavigate();
 
     console.log(loginDetails)
 
@@ -22,25 +22,20 @@ export default function Login() {
 
     // console.log(loginDetails)
     
-    const clickHandler =async (e)=> {
-        const {username, password} = loginDetails;
-         e.preventDefault();
-      let result =await   loginHandler(username, password)
-      //console.log("result",result);
-      navigate('/')
+    const clickHandler =(e)=> {
+        const {username, password} = loginDetails;       
+        loginHandler(username, password)   
+      navigate('/home')
     }
 
-    useEffect (() => {
-      loginHandler(loginDetails.username, loginDetails.password);
-    }, [loginDetails.username, loginDetails.password]);
+
 
     const testLoginHandler = () => {
       setLoginDetails((prev) => ({
         ...prev,
-        username: "adarshbalika",
-        password: "adarshBalika123",
-      }));
-      navigate('/home')
+        username: "ashokpatel",
+        password: "Ashokpatel123",
+      }));     
     };
 
 
@@ -65,7 +60,7 @@ export default function Login() {
 
       <button onClick={clickHandler }>Submit</button>
 
-      <button onClick={testLoginHandler}><Link to="/home">Guest Login</Link></button>
+      <button onClick={testLoginHandler}>Guest Login</button>
       
       
     </div>

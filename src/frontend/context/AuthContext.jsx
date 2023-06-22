@@ -17,7 +17,7 @@ export const AuthContextProvider = ({ children }) => {
   const navigate = useNavigate()
 
   const loginHandler = async (username, password) => {
-    console.log(username, password, "hello");
+  
     try {
         const {
           data: { foundUser, encodedToken },
@@ -26,15 +26,18 @@ export const AuthContextProvider = ({ children }) => {
             username: username,
             password: password,
         })
+
         if (status === 200 || status === 201) {
           localStorage.setItem(
             "login",
             JSON.stringify({ token: encodedToken })
           );
           setToken(encodedToken);
-          localStorage.setItem("user", JSON.stringify({ user: foundUser }));
+          localStorage.setItem("user", JSON.stringify({ token: encodedToken, user: foundUser }));
           setUser(foundUser);
         }
+
+        console.log(foundUser)
       } catch (e) {
         console.log("login error");
       }}

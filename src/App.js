@@ -7,11 +7,13 @@ import Signup from './frontend/pages/Signup/Signup';
 import Login from "./frontend/pages/Login/Login";
 import Home from './frontend/pages/Home/Home';
 import Explore from './frontend/pages/Explore/Explore';
+import { Navbar } from './frontend/components/Navbar/Navbar';
 
 
 function App() {
   return (
     <div className="App">
+       <Navbar/>
       
 
       <Routes>

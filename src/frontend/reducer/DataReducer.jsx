@@ -7,22 +7,43 @@ export const initialState = {
 
 export const dataReducer = (state,action)=> {
         switch(action.type){
-            case "Get_All_Post":{
-                return {
-                    ...state, posts:[...action.payload]
+            case "InitialServerData": {
+                if (action.payload.type === "allPosts") {
+                  return { ...state, posts: action.payload.value };
                 }
+          
+                if (action.payload.type === "allUsers") {
+                  return {
+                    ...state,
+                    users: action.payload.value,
+                    userProfile: action.payload.currentUser,
+                  };
+                }
+          
+                if (action.payload.type === "userBookmarkData") {
+                  return {
+                    ...state,
+                    users: [
+                      ...state.users.map((item) =>
+                        item.id === action.payload.currentUser.id
+                          ? { ...item, bookmarks: [...action.payload.value] }
+                          : item
+                      ),
+                    ],
+                  };
+                }
+          
+                return state;
+              }
+              default:
+                return state;
             }
-
-            case "Get_All_Users": {
-                return{
-                    ...state, users:action.payload.vlaue,
-                    userProfile:action.payload.currentUser
-                }
-            }
-
-                default: {
-                return state
-                }
+            
+           
         }
 
-}
+
+
+        
+        
+            

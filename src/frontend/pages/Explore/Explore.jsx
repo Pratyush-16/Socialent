@@ -8,7 +8,7 @@ export default function Explore() {
   return (
 
     <div>
-        <Navbar/>
+       
 
         <PostCard/>
       
