@@ -1,30 +1,32 @@
-import React from 'react'
+import React from "react";
 import SortIcon from "@mui/icons-material/Sort";
-import PostCard from '../PostCard/PostCard';
+import PostCard from "../PostCard/PostCard";
 
-export default function PostList({postState}) {
+export default function PostList({ postState }) {
   return (
     <div>
-
-     
-
-            <header className="postFeed_container-header">
+      <header className="postFeed_container-header">
         <span> Latest posts</span>
-        <span className="postFeed_settings flex-column">
-            <span>Trending</span>
-            <span>Latest</span>
-            <span>Oldest</span>
-          </span>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: 'space-around',
+            padding: "10px",
+      borderRadius: "8px",
+          }}
+        >
+          <span>Trending</span>
+          <span>Latest</span>
+          <span>Oldest</span>
+        </div>
       </header>
 
       <ul>
-       { postState.map((item) => (
-              <PostCard key={item.username} post={item}/>
-        ))
-        }
+        {postState.map((item) => (
+          <PostCard key={item.username} post={item} />
+        ))}
       </ul>
-        
-      
     </div>
-  )
+  );
 }
