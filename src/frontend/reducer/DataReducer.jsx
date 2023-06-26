@@ -65,6 +65,26 @@ export const dataReducer = (state,action)=> {
                 };
               } 
 
+              case "removeBookmark": {
+                const updatedUserData = state.users.map((user) => {
+                  return user.username === action.payload.username
+                    ? {
+                        ...user,
+                        bookmarks: [...action.payload.bookmarkValue],
+                      }
+                    : user;
+                });
+                return {
+                  ...state,
+                  users: updatedUserData,
+                  userProfile: {
+                    ...state.userProfile,
+                    bookmarks: [...action.payload.bookmarkValue],
+                  },
+                };
+              }
+          
+
 
 
               case "addNewPost": {
