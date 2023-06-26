@@ -1,7 +1,8 @@
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import { DataContext } from "../../context/DataContext";
-
+import { postDataFunction } from "../../Utils/Utils";
+import { addNewPostFunc } from "../../Utils/Utils";
 export default function AddPost  () {
   const [newPostData, setNewPostData] = useState({
     message: "",
@@ -20,6 +21,12 @@ export default function AddPost  () {
   //     setNewPostData
   //   );
 
+  const postHandler = (e) => postDataFunction(e, setNewPostData, newPostData);
+
+  const addNewPostHandler = () =>
+  addNewPostFunc(newPostData, setNewPostData, token, dispatch);
+
+
   return (
     <div className="addPost_container flex-column">
       <div className="addPost_InfoContainer ">
@@ -34,7 +41,7 @@ export default function AddPost  () {
             maxLength={200}
             name="message"
             value={newPostData.message}
-            // onChange={postHandler}
+            onChange={postHandler}
           >
             {newPostData.message}
           </textarea>
@@ -75,9 +82,9 @@ export default function AddPost  () {
             />
           </span>
 
-          {/* <button onClick={addNewPostHandler} className="btn postBtn">
+          <button onClick={addNewPostHandler} className="btn postBtn">
             Post
-          </button> */}
+          </button>
         </div>
       </div>
     </div>
