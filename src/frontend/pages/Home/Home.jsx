@@ -7,6 +7,7 @@ import PostCard from "../../components/PostCard/PostCard";
 import { DataContext } from "../../context/DataContext";
 import PostList from "../../components/PostList/PostList";
 import AddPost from "../../components/AddPost/AddPost";
+import Sidebar from "../../components/Sidebar/Sidebar";
 
 export default function Home() {
   const {
@@ -22,7 +23,7 @@ export default function Home() {
       </div>
 
       <aside className="side-container">
-
+        <Sidebar/>
       </aside>
 
     </article>

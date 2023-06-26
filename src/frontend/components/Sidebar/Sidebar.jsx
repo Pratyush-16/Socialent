@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import "./Sidebar.css"
 import { DataContext } from '../../context/DataContext'
 import { AuthContext } from '../../context/AuthContext'
 import { getUserFollowingList } from '../../Utils/Utils'
