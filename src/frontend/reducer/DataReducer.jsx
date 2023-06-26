@@ -60,6 +60,19 @@ export const dataReducer = (state,action)=> {
 
 
 
+              case "addNewPost": {
+                return {
+                  ...state,
+                  posts: action.payload.newpost,
+                  isPostModalOpen: false,
+                  isPostEdited: false,
+                  postModalDetails: null,
+                };
+              }
+          
+
+
+
 
               default:
                 return state;
