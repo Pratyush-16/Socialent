@@ -91,6 +91,33 @@ export const dataReducer = (state,action)=> {
                   posts: [...action.payload],
                 };
               }
+
+              case "openProfileModal": {
+                return {
+                  ...state,
+                  isProfileModalOpen: true,
+                  profileModalDetails: action.payload,
+                };
+              }
+
+              case "updateUserFollower": {
+                return {
+                  ...state,
+                  users: [
+                    ...state.users.map((item) => {
+                      return item._id !== action.payload.updatedUser._id &&
+                        item._id !== action.payload.updatedFollowedUser._id
+                        ? item
+                        : item._id === action.payload.updatedUser._id
+                        ? action.payload.updatedUser
+                        : action.payload.updatedFollowedUser;
+                    }),
+                  ],
+                  userProfile: action.payload.updatedUser,
+                };
+              }
+          
+
           
 
 
