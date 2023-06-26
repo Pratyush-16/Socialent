@@ -33,8 +33,8 @@ export default function Login() {
     const testLoginHandler = () => {
       setLoginDetails((prev) => ({
         ...prev,
-        username: "ashokpatel",
-        password: "Ashokpatel123",
+        username: "pratyushsingh",
+        password: "pratyushsingh123",
       }));     
     };
 

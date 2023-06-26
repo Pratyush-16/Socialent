@@ -8,15 +8,15 @@ import { formatDate } from "../utils/authUtils";
 export const users = [
   {
     _id: "b0fb276d-0e13-4dd5-84fa-c72314f1dc21",
-    firstname: "ashok",
-    lastname: "patel",
-    username: "ashokpatel",
-    password: "Ashokpatel123",
+    firstname: "pratyush",
+    lastname: "singh",
+    username: "pratyushsingh",
+    password: "pratyushsingh123",
     createdAt: formatDate(),
     updatedAt: formatDate(),
     bio: "A people loving government worker!",
     profileImage:
-      "https://res.cloudinary.com/dylkclyom/image/upload/v1653879146/latest_idft5q.png",
+      "https://res.cloudinary.com/dylkclyom/image/upload/v1653879146/latest_idft5q.pnghttps://res.cloudinary.com/dn0bhq6tx/image/upload/v1687789742/ProfileImage/cetclclmou7elgkqxrhy.jpg",
     website: "https://parksandrecreation.fandom.com/wiki/Leslie_Knope",
     followers: [
       {
@@ -102,9 +102,9 @@ export const users = [
     website: "https://www.shubhamsoni.me/",
     followers: [
       {
-        firstname: "ashok",
-        lastname: "patel",
-        username: "ashokpatel",
+        firstname: "pratyush",
+        lastname: "singh",
+        username: "pratyushsingh",
         profileImage:
           "https://res.cloudinary.com/dylkclyom/image/upload/v1653879146/latest_idft5q.png",
         website: "https://parksandrecreation.fandom.com/wiki/Leslie_Knope",
@@ -133,9 +133,9 @@ export const users = [
     ],
     following: [
       {
-        firstname: "ashok",
-        lastname: "patel",
-        username: "ashokpatel",
+        firstname: "pratyush",
+        lastname: "singh",
+        username: "pratyushsingh",
         profileImage:
           "https://res.cloudinary.com/dylkclyom/image/upload/v1653879146/latest_idft5q.png",
         website: "https://parksandrecreation.fandom.com/wiki/Leslie_Knope",
@@ -193,9 +193,9 @@ export const users = [
           "https://res.cloudinary.com/dylkclyom/image/upload/v1652722175/profile-img_nxszbk.jpg",
       },
       {
-        firstname: "ashok",
-        lastname: "patel",
-        username: "ashokpatel",
+        firstname: "pratyush",
+        lastname: "singh",
+        username: "pratyushsingh",
         profileImage:
           "https://res.cloudinary.com/dylkclyom/image/upload/v1653879146/latest_idft5q.png",
         website: "https://parksandrecreation.fandom.com/wiki/Leslie_Knope",
@@ -203,9 +203,9 @@ export const users = [
     ],
     following: [
       {
-        firstname: "ashok",
-        lastname: "patel",
-        username: "ashokpatel",
+        firstname: "pratyush",
+        lastname: "singh",
+        username: "pratyushsingh",
         profileImage:
           "https://res.cloudinary.com/dylkclyom/image/upload/v1653879146/latest_idft5q.png",
         website: "https://parksandrecreation.fandom.com/wiki/Leslie_Knope",
@@ -257,9 +257,9 @@ export const users = [
     website: "https://johndoe-portfolio.netlify.app/",
     followers: [
       {
-        firstname: "ashok",
-        lastname: "patel",
-        username: "ashokpatel",
+        firstname: "pratyush",
+        lastname: "singh",
+        username: "pratyushsingh",
         profileImage:
           "https://res.cloudinary.com/dylkclyom/image/upload/v1653879146/latest_idft5q.png",
         website: "https://parksandrecreation.fandom.com/wiki/Leslie_Knope",
@@ -288,9 +288,9 @@ export const users = [
     ],
     following: [
       {
-        firstname: "ashok",
-        lastname: "patel",
-        username: "ashokpatel",
+        firstname: "pratyush",
+        lastname: "singh",
+        username: "pratyushsingh",
         profileImage:
           "https://res.cloudinary.com/dylkclyom/image/upload/v1653879146/latest_idft5q.png",
         website: "https://parksandrecreation.fandom.com/wiki/Leslie_Knope",
@@ -328,9 +328,9 @@ export const users = [
     website: "https://dev-portfolio-template.netlify.app/",
     followers: [
       {
-        firstname: "ashok",
-        lastname: "patel",
-        username: "ashokpatel",
+        firstname: "pratyush",
+        lastname: "singh",
+        username: "pratyushsingh",
         profileImage:
           "https://res.cloudinary.com/dylkclyom/image/upload/v1653879146/latest_idft5q.png",
         website: "https://parksandrecreation.fandom.com/wiki/Leslie_Knope",
@@ -366,9 +366,9 @@ export const users = [
     ],
     following: [
       {
-        firstname: "ashok",
-        lastname: "patel",
-        username: "ashokpatel",
+        firstname: "pratyush",
+        lastname: "singh",
+        username: "pratyushsingh",
         profileImage:
           "https://res.cloudinary.com/dylkclyom/image/upload/v1653879146/latest_idft5q.png",
         website: "https://parksandrecreation.fandom.com/wiki/Leslie_Knope",
@@ -405,9 +405,9 @@ export const users = [
     website: "https://harrypotter.fandom.com/wiki/Hermione_Granger",
     followers: [
       {
-        firstname: "ashok",
-        lastname: "patel",
-        username: "ashokpatel",
+        firstname: "pratyush",
+        lastname: "singh",
+        username: "pratyushsingh",
         profileImage:
           "https://res.cloudinary.com/dylkclyom/image/upload/v1653879146/latest_idft5q.png",
         website: "https://parksandrecreation.fandom.com/wiki/Leslie_Knope",
