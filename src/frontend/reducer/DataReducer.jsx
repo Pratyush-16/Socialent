@@ -82,7 +82,7 @@ export const dataReducer = (state,action)=> {
                     bookmarks: [...action.payload.bookmarkValue],
                   },
                 };
-              }
+              } 
           
 
 
@@ -134,6 +134,34 @@ export const dataReducer = (state,action)=> {
                     }),
                   ],
                   userProfile: action.payload.updatedUser,
+                };
+              }
+
+              case "updateEditedProfile": {
+                const updatedUserPost = {
+                  firstname: action.payload.firstname,
+                  lastname: action.payload.lastname,
+                  profileImage: action.payload.profileImage,
+                };
+          
+                return {
+                  ...state,
+                  users: [
+                    ...state.users.map((item) =>
+                      item._id === action.payload._id ? action.payload : item
+                    ),
+                  ],
+          
+                  userProfile: action.payload,
+                  posts: [
+                    ...state.posts.map((item) =>
+                      item.username === action.payload.username
+                        ? { ...item, ...updatedUserPost }
+                        : item
+                    ),
+                  ],
+                  isProfileModalOpen: false,
+                  profileModalDetails: null,
                 };
               }
           

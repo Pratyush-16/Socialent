@@ -30,6 +30,30 @@ export const getuserProfile = async (userId, dispatch) => {
     }
   };
 
+  export const updateUserProfileService = async (token, userData, dispatch) => {
+    try {
+      const {
+        status,
+        data: { user },
+      } = await axios.post(
+        `/api/users/edit`,
+        { userData: userData },
+        {
+          headers: { authorization: token },
+        }
+      );
+  
+      if (status === 200 || status === 201) {
+        dispatch({
+          type: "updateEditedProfile",
+          payload: user,
+        });
+      }
+    } catch (error) {
+      console.error("updateUserProfileService", error);
+    }
+  };
+
 export const updateFollowList = async (followUserId, token, dispatch) => {
     try {
       const { status, data } = await axios.post(
