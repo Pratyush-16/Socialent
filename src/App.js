@@ -8,6 +8,8 @@ import Login from "./frontend/pages/Login/Login";
 import Home from './frontend/pages/Home/Home';
 import Explore from './frontend/pages/Explore/Explore';
 import { Navbar } from './frontend/components/Navbar/Navbar';
+import Bookmarks from './frontend/pages/Bookmarks/Bookmarks';
+import { RequireAuth } from './frontend/components/RequireAuth';
 
 
 function App() {
@@ -17,11 +19,24 @@ function App() {
       
 
       <Routes>
-          <Route path="/" element={<LandingPage/>} />
-        <Route path="/login" element={<Login/>} />
-          <Route path="/signup" element={<Signup/>} />
-          <Route path="/home" element={<Home/>} />
-          <Route path="/explore" element={<Explore  />} />
+          
+         
+         
+        
+
+          <Route path="/" element={<RequireAuth><Home/></RequireAuth>}/>
+            <Route path="/explore" element={<RequireAuth><Explore  /></RequireAuth>} />
+          <Route path="/bookmarks" element={<RequireAuth><Bookmarks  /></RequireAuth>} />
+          
+
+          <Route path="/user" element={<LandingPage/>}/>
+          <Route path="/login" element={<Login/>} />
+          <Route path="/signup" element={<Signup/>} /> 
+    
+             
+         
+         
+         
 
       </Routes>
     </div>

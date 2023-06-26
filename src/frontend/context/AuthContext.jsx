@@ -5,17 +5,16 @@ import { useNavigate } from "react-router";
 export const AuthContext = createContext();
 
 export const AuthContextProvider = ({ children }) => {
-  const localStorageToken = JSON.parse(localStorage.getItem("loginCredential"));
+  const localStorageToken = JSON.parse(localStorage.getItem("login"));
  // const userInfo = JSON.parse(localStorage.getItem("userInfo"));
 
-  const [token, setToken] = useState(localStorage?.token);
-  const [user, setUser] = useState(localStorage?.user);
+  const [token, setToken] = useState(localStorageToken?.token);
+  const [user, setUser] = useState(localStorageToken?.user);
   // const [userInfo, setUserInfo] = useState(localStorage?.userInfo);
 
-  console.log(token, "token");
+
 
   const navigate = useNavigate()
-
   const loginHandler = async (username, password) => {
   
     try {
@@ -30,14 +29,14 @@ export const AuthContextProvider = ({ children }) => {
         if (status === 200 || status === 201) {
           localStorage.setItem(
             "login",
-            JSON.stringify({ token: encodedToken })
+            JSON.stringify({ token: encodedToken, user: foundUser })
           );
-          setToken(encodedToken);
-          localStorage.setItem("user", JSON.stringify({ token: encodedToken, user: foundUser }));
-          setUser(foundUser);
+          setToken(encodedToken);         
+          setUser({...foundUser});
+          navigate("/")
         }
 
-        console.log(foundUser)
+        
       } catch (e) {
         console.log("login error");
       }}
@@ -95,7 +94,7 @@ export const AuthContextProvider = ({ children }) => {
         setUser(createdUser);
         setToken(encodedToken);
 
-        navigate('/login');
+       
       }
     } catch (error) {
       console.log(error);

@@ -25,7 +25,7 @@ export default function Login() {
     const clickHandler =(e)=> {
         const {username, password} = loginDetails;       
         loginHandler(username, password)   
-      navigate('/home')
+      
     }
 
 

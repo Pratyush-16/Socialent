@@ -10,12 +10,16 @@ export const DataContextProvider = ({children}) => {
     const [state,dispatch] = useReducer(dataReducer, initialState)
     const {token, user} = useContext(AuthContext)
 
-    console.log(user)
+ 
+
+    
 
 
     useEffect(() => {
       
-        getServerData(dispatch,token, user)
+        if(token){
+            getServerData(dispatch,token, user)
+        }
        
     },[token, user])
 

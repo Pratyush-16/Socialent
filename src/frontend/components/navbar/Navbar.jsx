@@ -11,7 +11,7 @@ export const  Navbar =() => {
         <span className='title'>My Socials</span>
 
         <div className='navbar-links'>
-            <NavLink to="/home">Home</NavLink>
+            <NavLink to="/">Home</NavLink>
             <NavLink to="/explore">Explore</NavLink>
             <NavLink to="/bookmarks">Bookmarks</NavLink>
             <NavLink to="/likedpost">LikedPost</NavLink>

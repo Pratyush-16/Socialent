@@ -2,7 +2,7 @@ import React from "react";
 import SortIcon from "@mui/icons-material/Sort";
 import PostCard from "../PostCard/PostCard";
 
-export default function PostList({ postState }) {
+export default function PostList({ postListData }) {
   return (
     <div>
       <header className="postFeed_container-header">
@@ -23,8 +23,8 @@ export default function PostList({ postState }) {
       </header>
 
       <ul>
-        {postState.map((item) => (
-          <PostCard key={item.username} post={item} />
+        {postListData?.map((item) => (
+          <PostCard key={item._id} post={item} />
         ))}
       </ul>
     </div>

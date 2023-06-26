@@ -11,13 +11,15 @@ export default function Home() {
   const {
     state: { posts, userProfile, users },
   } = useContext(DataContext);
-  //console.log(posts, users , userProfile"userprofiles list")
+
+  
+  
 
   return (
     <div>
       <AddPost />
 
-      <PostList postState={posts} />
+      <PostList postListData={posts} />
     </div>
   );
 }

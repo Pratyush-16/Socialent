@@ -12,6 +12,7 @@ import { DataContext } from '../../context/DataContext'
 import { AuthContext } from '../../context/AuthContext';
 import { useNavigate } from 'react-router';
 import "./postCard.css"
+import { postBookmarkService, removeBookmarkService } from '../../services/PostServices';
 
 export default function PostCard({post}) {
   const {
@@ -31,7 +32,7 @@ export default function PostCard({post}) {
   const navigate = useNavigate();
 
   const isPostBookmarked = userProfile?.bookmarks?.some(
-    (bookItem) => bookItem._id === postId
+    (bookItem) => bookItem?._id === postId
   );
 
   const isPostLiked = posts
@@ -45,9 +46,10 @@ export default function PostCard({post}) {
   };
 
   const postBookMarkHandler = (postId) => {
-    // isPostBookmarked
-    //   ? removeBookmarkService(postId, token, dispatch, userProfile?.username)
-    //   : postBookmarkService(postId, token, dispatch, userProfile?.username);
+    isPostBookmarked
+      ? removeBookmarkService(postId, token, dispatch, userProfile?.username)
+      : postBookmarkService(postId, token, dispatch, userProfile?.username);
+    console.log("bookmarkclicked")
   };
 
   const profileHandler = () => {
@@ -87,7 +89,7 @@ export default function PostCard({post}) {
           </div>
         </div>
 
-        {user.username === username && (
+        {user?.username === username && (
           <div className="feedListItem_header-text-partThree">
             <span>
               <MoreHorizIcon />

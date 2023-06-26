@@ -14,7 +14,7 @@ export default function Explore() {
     <div>
        
 
-       <PostList postState={posts}/>
+       <PostList postListData={posts}/>
       
     </div>
   )
