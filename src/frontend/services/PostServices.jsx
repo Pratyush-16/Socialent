@@ -28,24 +28,45 @@ export const addNewPostService = async (token, post, dispatch) => {
   }
 };
 
-export const getPostEditService = async (postId, dispatch) => {
+export const removeLikedPost = async (postId, token, dispatch) => {
   try {
-    const {
-      status,
-      data: { post },
-    } = await axios.get(`/api/posts/${postId}`);
+    const { status, data } = await axios.post(
+      `/api/posts/dislike/${postId}`,
+      {},
+      {
+        headers: { authorization: token },
+      }
+    );
 
     if (status === 200 || status === 201) {
       dispatch({
-        type: "openPostModal",
-        payload: {
-          type: "edit",
-          value: post,
-        },
+        type: "removeLikedPost",
+        payload: data?.posts,
       });
     }
   } catch (error) {
-    console.error("postEdit", error);
+    console.error("removeLikedpost", error);
+  }
+};
+
+export const addLikedPost = async (postId, token, dispatch) => {
+  try {
+    const { status, data } = await axios.post(
+      `/api/posts/like/${postId}`,
+      {},
+      {
+        headers: { authorization: token },
+      }
+    );
+
+    if (status === 200 || status === 201) {
+      dispatch({
+        type: "likedPost",
+        payload: data?.posts,
+      });
+    }
+  } catch (error) {
+    console.error("addLikedpost", error);
   }
 };
 

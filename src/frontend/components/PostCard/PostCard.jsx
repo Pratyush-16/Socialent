@@ -12,7 +12,7 @@ import { DataContext } from '../../context/DataContext'
 import { AuthContext } from '../../context/AuthContext';
 import { useNavigate } from 'react-router';
 import "./postCard.css"
-import { postBookmarkService, removeBookmarkService } from '../../services/PostServices';
+import { addLikedPost, postBookmarkService, removeBookmarkService, removeLikedPost } from '../../services/PostServices';
 
 export default function PostCard({post}) {
   const {
@@ -36,14 +36,14 @@ export default function PostCard({post}) {
   );
 
   const isPostLiked = posts
-    // .find((post) => post._id === postId)
-    // .likes.likedBy.some((post) => post.username === userProfile?.username);
+    .find((post) => post._id === postId)
+    .likes.likedBy.some((post) => post.username === userProfile?.username);
 
-  const postLikeHandler = (postId) => {
-    // isPostLiked
-    //   ? removeLikedPost(postId, token, dispatch)
-    //   : addLikedPost(postId, token, dispatch);
-  };
+    const postLikeHandler = (postId) => {
+      isPostLiked
+        ? removeLikedPost(postId, token, dispatch)
+        : addLikedPost(postId, token, dispatch);
+    };
 
   const postBookMarkHandler = (postId) => {
     isPostBookmarked

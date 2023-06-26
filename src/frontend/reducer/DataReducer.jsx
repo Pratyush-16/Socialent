@@ -71,12 +71,17 @@ export const dataReducer = (state,action)=> {
               }
 
 
-              case "openPostModal": {
+              case "likedPost": {
                 return {
                   ...state,
-                  isPostModalOpen: true,
-                  isPostEdited: action.payload.type === "edit",
-                  postModalDetails: action?.payload?.value,
+                  posts: [...action.payload],
+                };
+              }
+          
+              case "removeLikedPost": {
+                return {
+                  ...state,
+                  posts: [...action.payload],
                 };
               }
           
