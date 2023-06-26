@@ -29,7 +29,7 @@ export const getuserProfile = async (userId, dispatch) => {
       console.error("getUserProfileService", error);
     }
   };
-  
+
 export const updateFollowList = async (followUserId, token, dispatch) => {
     try {
       const { status, data } = await axios.post(
@@ -75,6 +75,6 @@ export const updateFollowList = async (followUserId, token, dispatch) => {
         });
       }
     } catch (error) {
-      console.error("removeUserFollow", error);
+      console.error("removeUserFollow", error); 
     }
   };

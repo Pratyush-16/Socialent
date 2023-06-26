@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-
+import "./ProfileFeed.css"
 import { DataContext } from '../../context/DataContext'
 import { AuthContext } from '../../context/AuthContext'
 import { useParams } from 'react-router'
