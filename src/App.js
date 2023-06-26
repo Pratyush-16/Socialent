@@ -11,6 +11,7 @@ import { Navbar } from './frontend/components/Navbar/Navbar';
 import Bookmarks from './frontend/pages/Bookmarks/Bookmarks';
 import { RequireAuth } from './frontend/components/RequireAuth';
 import LikedPost from './frontend/pages/LikedPost/LikedPost';
+import ProfilePage from './frontend/pages/ProfilePage/ProfilePage';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
             <Route path="/explore" element={<RequireAuth><Explore  /></RequireAuth>} />
           <Route path="/bookmarks" element={<RequireAuth><Bookmarks  /></RequireAuth>} />
           <Route path="/likedpost" element={<RequireAuth><LikedPost  /></RequireAuth>} />
+          <Route path="/profile/:profileId" element={<RequireAuth><ProfilePage  /></RequireAuth>} />
           
 
           <Route path="/user" element={<LandingPage/>}/>

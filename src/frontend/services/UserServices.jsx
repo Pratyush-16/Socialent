@@ -1,5 +1,16 @@
 import axios from "axios";
 
+export const getuserProfile = async (userId, dispatch) => {
+    try {
+      const { status, data } = await axios.get(`/api/users/${userId}`);
+  
+      if (status === 200 || status === 201) {
+        dispatch({ type: "getProfileDetails", payload: data?.user });
+      }
+    } catch (error) {
+      console.error("userprofile", error);
+    }
+  };
 
 export const updateFollowList = async (followUserId, token, dispatch) => {
     try {

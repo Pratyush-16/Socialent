@@ -37,6 +37,13 @@ export const dataReducer = (state,action)=> {
 
               }
 
+              case "getProfileDetails": {
+                return {
+                  ...state,
+                  profileDetails: action.payload,
+                };
+              }
+
 
               case "addBookmark": {
                 const updatedUserData = state.users.map((user) => {
