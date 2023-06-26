@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import "./AddPost.css"
 import { AuthContext } from "../../context/AuthContext";
 import { DataContext } from "../../context/DataContext";
 import { postDataFunction } from "../../Utils/Utils";

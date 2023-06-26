@@ -1057,7 +1057,7 @@ export const posts = [
           lastname: "Singh",
           username: "pratyush",
           profileImage:
-            "https://res.cloudinary.com/dn0bhq6tx/image/upload/v1687789742/ProfileImage/cetclclmou7elgkqxrhy.jpg",
+            "https://res.cloudinary.com/dn0bhq6tx/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1687789742/ProfileImage/cetclclmou7elgkqxrhy.jpg",
         },
         {
           _id: "3cf48e2f-e199-46fc-86ea-804ca3ab49c9",
