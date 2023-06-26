@@ -114,7 +114,7 @@ export const posts = [
           lastname: "Singh",
           username: "pratyush",
           profileImage:
-            "https://res.cloudinary.com/dylkclyom/image/upload/v1653879146/latest_idft5q.png",
+            "https://res.cloudinary.com/dn0bhq6tx/image/upload/v1687789742/ProfileImage/cetclclmou7elgkqxrhy.jpg",
         },
         {
           _id: "1de0af5d-8505-47be-9dfc-8e1a9c7261c2",
@@ -132,7 +132,7 @@ export const posts = [
     firstname: "Pratyush",
     lastname: "Singh",
     profileImage:
-      "https://res.cloudinary.com/dylkclyom/image/upload/v1653879146/latest_idft5q.png",
+      "https://res.cloudinary.com/dn0bhq6tx/image/upload/v1687789742/ProfileImage/cetclclmou7elgkqxrhy.jpg",
 
     createdAt: new Date("February 10, 2023 10:16:26"),
     updatedAt: formatDate(),
@@ -199,7 +199,7 @@ export const posts = [
     firstname: "Pratyush",
     lastname: "Singh",
     profileImage:
-      "https://res.cloudinary.com/dylkclyom/image/upload/v1653879146/latest_idft5q.png",
+      "https://res.cloudinary.com/dn0bhq6tx/image/upload/v1687789742/ProfileImage/cetclclmou7elgkqxrhy.jpg",
 
     createdAt: new Date("February 10, 2023 11:06:56"),
     updatedAt: formatDate(),
@@ -265,7 +265,7 @@ export const posts = [
           lastname: "Singh",
           username: "pratyush",
           profileImage:
-            "https://res.cloudinary.com/dylkclyom/image/upload/v1653879146/latest_idft5q.png",
+            "https://res.cloudinary.com/dn0bhq6tx/image/upload/v1687789742/ProfileImage/cetclclmou7elgkqxrhy.jpg",
         },
         {
           _id: "1de0af5d-8505-47be-9dfc-8e1a9c7261c2",
@@ -304,7 +304,7 @@ export const posts = [
         firstname: "Pratyush",
         lastname: "Singh",
         profileImage:
-          "https://res.cloudinary.com/dylkclyom/image/upload/v1653879146/latest_idft5q.png",
+          "https://res.cloudinary.com/dn0bhq6tx/image/upload/v1687789742/ProfileImage/cetclclmou7elgkqxrhy.jpg",
 
         text: "Hey, why don't you go out for a change! xD",
         createdAt: new Date("March 14, 2023 10:17:19"),
@@ -592,7 +592,7 @@ export const posts = [
           lastname: "Singh",
           username: "pratyush",
           profileImage:
-            "https://res.cloudinary.com/dylkclyom/image/upload/v1653879146/latest_idft5q.png",
+            "https://res.cloudinary.com/dn0bhq6tx/image/upload/v1687789742/ProfileImage/cetclclmou7elgkqxrhy.jpg",
         },
         {
           _id: "3cf48e2f-e199-46fc-86ea-804ca3ab49c9",
@@ -1057,7 +1057,7 @@ export const posts = [
           lastname: "Singh",
           username: "pratyush",
           profileImage:
-            "https://res.cloudinary.com/dylkclyom/image/upload/v1653879146/latest_idft5q.png",
+            "https://res.cloudinary.com/dn0bhq6tx/image/upload/v1687789742/ProfileImage/cetclclmou7elgkqxrhy.jpg",
         },
         {
           _id: "3cf48e2f-e199-46fc-86ea-804ca3ab49c9",

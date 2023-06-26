@@ -69,6 +69,16 @@ export const dataReducer = (state,action)=> {
                   postModalDetails: null,
                 };
               }
+
+
+              case "openPostModal": {
+                return {
+                  ...state,
+                  isPostModalOpen: true,
+                  isPostEdited: action.payload.type === "edit",
+                  postModalDetails: action?.payload?.value,
+                };
+              }
           
 
 

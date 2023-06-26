@@ -16,7 +16,7 @@ export const users = [
     updatedAt: formatDate(),
     bio: "A people loving government worker!",
     profileImage:
-      "https://res.cloudinary.com/dylkclyom/image/upload/v1653879146/latest_idft5q.pnghttps://res.cloudinary.com/dn0bhq6tx/image/upload/v1687789742/ProfileImage/cetclclmou7elgkqxrhy.jpg",
+      "https://res.cloudinary.com/dn0bhq6tx/image/upload/v1687789742/ProfileImage/cetclclmou7elgkqxrhy.jpg",
     website: "https://parksandrecreation.fandom.com/wiki/Leslie_Knope",
     followers: [
       {
