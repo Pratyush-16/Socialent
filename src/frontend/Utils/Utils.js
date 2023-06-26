@@ -9,6 +9,11 @@ export const addNewPostFunc = (newPostData, setNewPostData, token, dispatch) => 
       });
     };  
 
+    export const getUserFollowingList = (currentUser) => {
+      return currentUser?.following?.map((item) => item?.username);
+    };
+    
+
     export const postDataFunction = (e, setNewPostData, newPostData) => {
         e.stopPropagation();
         const { name, value, files } = e.target;

@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import "./Explore.css"
 import { Navbar } from '../../components/Navbar/Navbar'
 import PostCard from '../../components/PostCard/PostCard'
 import PostList from '../../components/PostList/PostList'
@@ -11,7 +12,7 @@ export default function Explore() {
 
   return (
 
-    <div>
+    <div className="postFeed_container" >
        
 
        <PostList postListData={posts}/>

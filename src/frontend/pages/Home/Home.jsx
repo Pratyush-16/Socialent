@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from "react";
+import "./Home.css";
 import { Navbar } from "../../components/Navbar/Navbar";
 
 import { getAllPost } from "../../services/DataServices";
@@ -12,14 +13,18 @@ export default function Home() {
     state: { posts, userProfile, users },
   } = useContext(DataContext);
 
-  
-  
-
   return (
-    <div>
-      <AddPost />
+    <article className="page-container">
+      <div className="postFeed_container">
+        <AddPost />
 
-      <PostList postListData={posts} />
-    </div>
+        <PostList postListData={posts} />
+      </div>
+
+      <aside className="side-container">
+
+      </aside>
+
+    </article>
   );
 }
