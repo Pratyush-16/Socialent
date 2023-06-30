@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import ShareIcon from "@mui/icons-material/Share";
+
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import BookmarkIcon from "@mui/icons-material/Bookmark";
@@ -123,12 +123,7 @@ export default function PostCard({post}) {
             {isPostLiked ? <FavoriteIcon /> : <FavoriteBorderIcon />}
             {likeCount > 0 && <span className="likeCount">{likeCount}</span>}
           </span>
-          <span className="post_commentIcon">
-            <ChatBubbleOutlineIcon />
-            {comments.length > 0 && (
-              <span className="commentCount">{comments.length}</span>
-            )}
-          </span>
+         
           <span
             className={`post_bookmarkIcon ${isPostBookmarked && "marked"}`}
             onClick={() => postBookMarkHandler(postId)}
@@ -136,7 +131,7 @@ export default function PostCard({post}) {
             {isPostBookmarked ? <BookmarkIcon /> : <BookmarkBorderIcon />}
           </span>
           <span className="post_shareIcon">
-            <ShareIcon />
+            
           </span>
         </div>
       </div>

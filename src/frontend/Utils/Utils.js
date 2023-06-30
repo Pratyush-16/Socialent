@@ -1,5 +1,10 @@
 import {addNewPostService} from "../services/PostServices"
 
+export const validateOnlyString = (input) => {
+  return /^[a-z A-Z]+$/.test(input);
+};
+
+
 export const addNewPostFunc = (newPostData, setNewPostData, token, dispatch) => {
     newPostData.message.length > 1 &&
       addNewPostService(token, newPostData, dispatch);

@@ -3,6 +3,12 @@ export const initialState = {
     users:[],
     userProfile:{},
     // bookmarks:[]
+    profileModalDetails: null ,
+    isPostModalOpen: false,
+  postModalDetails: null,
+  isPostEdited: false,
+  isProfileModalOpen: false,
+  profileModalDetails: null,
 }
 
 export const dataReducer = (state,action)=> {
