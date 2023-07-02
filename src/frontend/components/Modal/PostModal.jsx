@@ -1,8 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { AuthContext } from '../../context/AuthContext'
 import { DataContext } from '../../context/DataContext'
-import { addNewPostService } from '../../services/PostServices'
-import { postDataFunction } from '../../Utils/Utils'
+import { addNewPostService, postUpdateService } from '../../services/PostServices'
+import { deletePreviewFunction, postDataFunction } from '../../Utils/Utils'
+import AddReactionIcon from "@mui/icons-material/AddReaction";
+import HighlightOffIcon from "@mui/icons-material/HighlightOff";
 
 export default function PostModal() {
 
@@ -22,7 +24,7 @@ export default function PostModal() {
     addNewPostService(postModalData, token, dispatch);
 
   const deletePreviewHandler = (id) =>
-    deletePreviewFunc(id, postModalData, setPostModalData);
+    deletePreviewFunction(id, postModalData, setPostModalData);
 
   const updatePostModalDataHandler = () => {
     const updatedPost = {
@@ -36,7 +38,7 @@ export default function PostModal() {
 
   const closePostModalHandler = () => {
     dispatch({
-      type: ActionType.ClosePostModal,
+      type: "ClosePostModal",
     });
   };
 

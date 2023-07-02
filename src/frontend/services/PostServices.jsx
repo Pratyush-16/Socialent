@@ -130,3 +130,29 @@ export const postBookmarkService = async (
       console.error("removebookmark", error);
     }
   };
+
+  export const postUpdateService = async (postId, post, token, dispatch) => {
+    try {
+      const {
+        status,
+        data: { posts },
+      } = await axios.post(
+        `/api/posts/edit/${postId}`,
+        {
+          postData: post,
+        },
+        {
+          headers: { authorization: token },
+        }
+      );
+  
+      if (status === 200 || status === 201) {
+        dispatch({
+          type: "UpdatePost",
+          payload: posts,
+        });
+      }
+    } catch (error) {
+      console.error("postEdit", error);
+    }
+  };

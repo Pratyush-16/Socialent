@@ -13,6 +13,7 @@ import { AuthContext } from '../../context/AuthContext';
 import { useNavigate } from 'react-router';
 import "./postCard.css"
 import { addLikedPost, postBookmarkService, removeBookmarkService, removeLikedPost } from '../../services/PostServices';
+import { timeAgo } from '../../Utils/Utils';
 
 export default function PostCard({post}) {
   const {
@@ -85,7 +86,7 @@ export default function PostCard({post}) {
 
           <div className="feedListItem_header-text-partTwo">
             <span className="username">@{username}</span>
-            {/* <span className="postDate">{`${timeAgo(createdAt)}`}</span> */}
+            <span className="postDate">{`${timeAgo(createdAt)}`}</span>
           </div>
         </div>
 

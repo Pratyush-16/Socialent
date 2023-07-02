@@ -170,6 +170,16 @@ export const dataReducer = (state,action)=> {
                   profileModalDetails: null,
                 };
               }
+
+              case "UpdatePost" : {
+                return {
+                  ...state,
+                  isPostModalOpen: false,
+                  isPostEdited: false,
+                  postModalDetails: null,
+                  posts: action.payload,
+                };
+              }
           
 
           
