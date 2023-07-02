@@ -131,6 +131,27 @@ export const postBookmarkService = async (
     }
   };
 
+  export const getPostEditService = async (postId, dispatch) => {
+    try {
+      const {
+        status,
+        data: { post },
+      } = await axios.get(`/api/posts/${postId}`);
+  
+      if (status === 200 || status === 201) {
+        dispatch({
+          type: "OpenPostModal",
+          payload: {
+            type: "edit",
+            value: post,
+          },
+        });
+      }
+    } catch (error) {
+      console.error("postEdit", error);
+    }
+  };
+
   export const postUpdateService = async (postId, post, token, dispatch) => {
     try {
       const {

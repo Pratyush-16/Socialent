@@ -171,6 +171,40 @@ export const dataReducer = (state,action)=> {
                 };
               }
 
+              case "OpenPostModal": {
+                return {
+                  ...state,
+                  isPostModalOpen: true,
+                  isPostEdited: action.payload.type === "edit",
+                  postModalDetails: action.payload.value,
+                };
+              }
+          
+              case "ClosePostModal": {
+                return {
+                  ...state,
+                  isPostModalOpen: false,
+                  isPostEdited: false,
+                  postModalDetails: null,
+                };
+              }
+
+              case "CloseProfileModal": {
+                return {
+                  ...state,
+                  isProfileModalOpen: false,
+                  profileModalDetails: null,
+                };
+              }
+          
+              case "OpenProfileModal": {
+                return {
+                  ...state,
+                  isProfileModalOpen: true,
+                  profileModalDetails: action.payload,
+                };
+              }
+
               case "UpdatePost" : {
                 return {
                   ...state,
@@ -181,6 +215,32 @@ export const dataReducer = (state,action)=> {
                 };
               }
           
+              case "UpdateProfile": {
+                const updatedUserPost = {
+                  firstname: action.payload.firstname,
+                  lastname: action.payload.lastname,
+                  profileImage: action.payload.profileImage,
+                };
+                return {
+                  ...state,
+                  users: [
+                    ...state.users.map((item) =>
+                      item._id === action.payload._id ? action.payload : item
+                    ),
+                  ],
+          
+                  userProfile: action.payload,
+                  posts: [
+                    ...state.posts.map((item) =>
+                      item.username === action.payload.username
+                        ? { ...item, ...updatedUserPost }
+                        : item
+                    ),
+                  ],
+                  isProfileModalOpen: false,
+                  profileModalDetails: null,
+                };
+              }
 
           
 

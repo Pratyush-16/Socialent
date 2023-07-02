@@ -76,7 +76,7 @@ export default function ProfileFeed() {
           </div>
           <div className="profile_details-partFour">
             <span>
-              {/* <LInkIcon /> */}
+              
               <Link to={profileDetails?.website}>
                 {profileDetails?.website}
               </Link>

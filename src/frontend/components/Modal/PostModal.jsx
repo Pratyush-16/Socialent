@@ -63,7 +63,7 @@ export default function PostModal() {
     </div>
     <div
       className="postModal_InfoContainer"
-      onClick={() => setEmojiModalOpen(false)}
+      
     >
       <label htmlFor="postModalMessage"></label>
       <textarea
@@ -100,7 +100,7 @@ export default function PostModal() {
       <div className="postModal_footer">
         <span>
           <label className="uploadImageLabel" htmlFor="postModalFile">
-            <AddPhotoAlternateIcon />
+            
           </label>
           <input
             type="file"
@@ -111,9 +111,7 @@ export default function PostModal() {
             onChange={postModalHandler}
           />
 
-          <span className="emojiPickerIcon">
-            <AddReactionIcon onClick={emojiModalHandler} />
-          </span>
+          
         </span>
 
         {isPostEdited ? (

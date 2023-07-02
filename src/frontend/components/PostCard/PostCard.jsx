@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import FavoriteIcon from "@mui/icons-material/Favorite";
@@ -16,6 +16,8 @@ import { addLikedPost, postBookmarkService, removeBookmarkService, removeLikedPo
 import { timeAgo } from '../../Utils/Utils';
 
 export default function PostCard({post}) {
+
+  const [postEdit, setPostEdit] = useState(false);
   const {
     _id: postId,
     profileImage,
@@ -53,15 +55,12 @@ export default function PostCard({post}) {
     console.log("bookmarkclicked")
   };
 
-  const profileHandler = () => {
-    // const getProfileId = users.find((user) => user.username === username)?._id;
-    // getuserProfile(getProfileId, dispatch);
-    // navigate(`/profile/${getProfileId}`);
-  };
+ 
 
-  const postEditHandler = (postId) => {
-    // getPostEditService(postId, dispatch);
-  };
+  // const postEditHandler = (postId) => {
+  //   setPostEdit(false);
+  //   getPostEditService(postId, dispatch);
+  // };
 
   const postDeleteHandler = (postId) => {
     // deletePostService(token, postId, dispatch);
@@ -95,10 +94,10 @@ export default function PostCard({post}) {
             <span>
               <MoreHorizIcon />
             </span>
-            <span className="post-settings flex-column">
+            {/* <span className="post-settings flex-column">
               <span onClick={() => postEditHandler(postId, post)}>Edit</span>
               <span onClick={() => postDeleteHandler(postId)}>Delete</span>
-            </span>
+            </span> */}
           </div>
         )}
       </div>
