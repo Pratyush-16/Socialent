@@ -2,7 +2,7 @@ export const initialState = {
     posts:[],
     users:[],
     userProfile:{},
-    // bookmarks:[]
+    
     profileModalDetails: null ,
     isPostModalOpen: false,
   postModalDetails: null,

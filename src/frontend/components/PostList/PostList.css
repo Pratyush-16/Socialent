@@ -1,0 +1,10 @@
+.postFeed_container-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    margin-top: 0.5rem;
+  }
+
+  
+  

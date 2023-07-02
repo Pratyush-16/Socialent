@@ -90,4 +90,5 @@ export const addNewPostFunc = (newPostData, setNewPostData, token, dispatch) => 
           files: data.files.filter((item, index) => index !== id),
         });
       };
-    
+
+      
