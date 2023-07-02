@@ -17,10 +17,7 @@ export default function AddPost  () {
     dispatch,
   } = useContext(DataContext);
 
-  //   useEmoji(
-  //     newPostData,
-  //     setNewPostData
-  //   );
+  
 
   const postHandler = (e) => postDataFunction(e, setNewPostData, newPostData);
 
@@ -50,38 +47,9 @@ export default function AddPost  () {
       </div>
 
       <div className="addPost_BtnContainer flex-column">
-        <ul className="addPost_ImgUpload-container">
-          {newPostData?.files?.map((file, id) => {
-            return (
-              <li className="newPostImg-container" key={id}>
-                {file && (
-                  <img
-                    src={file}
-                    alt="post files"
-                    width="150px"
-                    height="150px"
-                    className="newpostImg"
-                  />
-                )}
-                {/* <span onClick={() => deletePreviewHandler(id)}> X</span> */}
-              </li>
-            );
-          })}
-        </ul>
+        
         <div className="addPost_footer">
-          <span>
-            <label className="uploadImageLabel" htmlFor="postFile">
-              {/* <AddPhotoAlternateIcon /> */}
-            </label>
-            <input
-              type="file"
-              id="postFile"
-              accept="image/*"
-              name="files"
-              className="uploadImage"
-            //   onChange={postHandler}
-            />
-          </span>
+          
 
           <button onClick={addNewPostHandler} className="btn postBtn">
             Post

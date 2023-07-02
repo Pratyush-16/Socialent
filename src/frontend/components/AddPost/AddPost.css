@@ -1,3 +1,54 @@
+.addPost_container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2.5rem 2.5rem;
+    margin: 2rem 0;
+    width: 100%;
+    gap: 1.5rem;
+    background-color: var(--background-color-one);
+    border-radius: 0.8rem;
+  }
+
+  .addPost_InfoContainer {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .addPost_message textarea {
+    width: 100%;
+    min-height: 14rem;
+    resize: none;
+    border: none;
+    outline: none;
+    padding: 0 0.5rem;
+    font-size: 1.8rem;
+    font-family: inherit;
+  }
+
+  .addPost_BtnContainer {
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .addPost_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 1.5rem;
+  }
+  
+  .addPost_footer .postBtn {
+    padding: 0.4rem 0.8rem;
+    font-size: 1.8rem;
+    margin-left: auto;
+    border-radius: 0.5rem;
+    transition: all 0.25s;
+  }
+  
 .addPost_ImgContainer{
     position: relative;
     width: 8rem;

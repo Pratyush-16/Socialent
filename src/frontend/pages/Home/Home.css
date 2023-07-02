@@ -8,7 +8,7 @@
     position: relative;
     grid-area: main;
     height: 125vh;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
   }
 
   .side-container{
@@ -16,19 +16,10 @@
 
   }
   
-  /* Hide scrollbar for Chrome, Safari and Opera */
-  .postFeed_container::-webkit-scrollbar {
-    display: none;
-  }
   
-  /* Hide scrollbar for IE, Edge and Firefox */
-  .postFeed_container {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-  }
   
   .postFeed_container ul {
-    width: 100%;
+    width: 80%;
     align-items: flex-start;
     justify-content: center;
     gap: 2rem;
