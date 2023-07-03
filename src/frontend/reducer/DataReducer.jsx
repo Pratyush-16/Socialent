@@ -118,15 +118,9 @@ export const dataReducer = (state,action)=> {
                 };
               }
 
-              case "openProfileModal": {
-                return {
-                  ...state,
-                  isProfileModalOpen: true,
-                  profileModalDetails: action.payload,
-                };
-              }
+              
 
-              case "updateUserFollower": {
+              case "UpdateUserFollowerList": {
                 return {
                   ...state,
                   users: [
@@ -189,15 +183,7 @@ export const dataReducer = (state,action)=> {
                 };
               }
 
-              case "CloseProfileModal": {
-                return {
-                  ...state,
-                  isProfileModalOpen: false,
-                  profileModalDetails: null,
-                };
-              }
-          
-              case "OpenProfileModal": {
+              case "openProfileModal": {
                 return {
                   ...state,
                   isProfileModalOpen: true,
@@ -205,12 +191,29 @@ export const dataReducer = (state,action)=> {
                 };
               }
 
+              case "closeProfileModal": {
+                return {
+                  ...state,
+                  isProfileModalOpen: false,
+                  profileModalDetails: null,
+                };
+              }
+          
+              
+
               case "UpdatePost" : {
                 return {
                   ...state,
                   isPostModalOpen: false,
                   isPostEdited: false,
                   postModalDetails: null,
+                  posts: action.payload,
+                };
+              }
+
+              case "DeletePost": {
+                return {
+                  ...state,
                   posts: action.payload,
                 };
               }

@@ -18,7 +18,7 @@ export default function PostModal() {
     const{state :{postModalDetails, isPostEdited},dispatch} = useContext(DataContext)
 
     const postModalHandler = (e) =>
-    postDataFunction(e, postModalData, setPostModalData);
+    postDataFunction(e, setPostModalData, postModalData, );
 
   const addNewPostHandler = () =>
     addNewPostService(postModalData, token, dispatch);

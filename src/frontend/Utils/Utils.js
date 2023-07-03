@@ -1,6 +1,11 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import {addNewPostService} from "../services/PostServices"
 import { DataContext } from "../context/DataContext";
+
+
+export const validateOnlyString = (input) => {
+  return /^[a-z A-Z]+$/.test(input);
+};
 
 
  export const timeAgo = (date) => {
@@ -74,13 +79,12 @@ export const addNewPostFunc = (newPostData, setNewPostData, token, dispatch) => 
 
     export const postDataFunction = (e, setNewPostData, newPostData) => {
         e.stopPropagation();
-        const { name, value, files } = e.target;
-        const filesUrl =
-          files && [...files]?.map((file) => URL.createObjectURL(file));
+        const { name, value,  } = e.target;
+       
       
         setNewPostData({
           ...newPostData,
-          [name]: name === "message" ? value : [...newPostData.files, filesUrl],
+          [name]: value 
         });
       };
 
@@ -91,4 +95,31 @@ export const addNewPostFunc = (newPostData, setNewPostData, token, dispatch) => 
         });
       };
 
+      export const useClickedOutsideDropBox = (
+        dropBoxstate,
+        setDropBoxState,
+        refState
+      ) => {
+        useEffect(() => {
+          const checkIfClickedOutside = (e) => {
+            // If the menu is open and the clicked target is not within the menu,
+            // then close the menu
+            if (
+              dropBoxstate &&
+              refState.current &&
+              !refState.current.contains(e.target)
+            ) {
+              setDropBoxState(false);
+            }
+          };
+      
+          document.addEventListener("mousedown", checkIfClickedOutside);
+      
+          return () => {
+            // Cleanup the event listener
+            document.removeEventListener("mousedown", checkIfClickedOutside);
+          };
+        }, [dropBoxstate, refState, setDropBoxState]);
+      };
+      
       

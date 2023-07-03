@@ -44,9 +44,9 @@ export const posts = [
       ],
       dislikedBy: [],
     },
-    username: "pratyush",
-    firstname: "Pratyush",
-    lastname: "Singh",
+    username: "Bharati ",
+    firstname: "Bharati",
+    lastname: "Subramanian",
     profileImage:
       "https://res.cloudinary.com/dylkclyom/image/upload/v1652721980/Bharati2_qxscpm.png",
     createdAt: new Date("May 12, 2023 20:10:05"),

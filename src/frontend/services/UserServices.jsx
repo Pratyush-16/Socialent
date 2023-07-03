@@ -45,7 +45,7 @@ export const getuserProfile = async (userId, dispatch) => {
   
       if (status === 200 || status === 201) {
         dispatch({
-          type: "updateEditedProfile",
+          type: "UpdateProfile",
           payload: user,
         });
       }
@@ -100,5 +100,38 @@ export const updateFollowList = async (followUserId, token, dispatch) => {
       }
     } catch (error) {
       console.error("removeUserFollow", error); 
+    }
+  };
+
+  export const followService = async (
+    followUserId,
+    token,
+    dispatch,
+    userfirstname,
+    userLastname
+  ) => {
+
+    console.log(followUserId)
+    try {
+      const { status, data } = await axios.post(
+        `/api/users/follow/${followUserId}`,
+        {},
+        {
+          headers: { authorization: token },
+        }
+      );
+  
+      if (status === 200 || status === 201) {
+        dispatch({
+          type: "UpdateUserFollowerList",
+          payload: {
+            updatedUser: data.user,
+            updatedFollowedUser: data.followUser,
+          },
+        });
+        
+      }
+    } catch (error) {
+      console.error("addUserFollow", error);
     }
   };

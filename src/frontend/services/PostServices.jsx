@@ -149,6 +149,7 @@ export const postBookmarkService = async (
       }
     } catch (error) {
       console.error("postEdit", error);
+      
     }
   };
 
@@ -175,5 +176,31 @@ export const postBookmarkService = async (
       }
     } catch (error) {
       console.error("postEdit", error);
+    }
+  };
+
+  export const postDeleteService = async (postId, token, dispatch) => {
+    try {
+      const {
+        status,
+        data: { posts },
+      } = await axios.delete(
+        `/api/posts/${postId}`,
+  
+        {
+          headers: { authorization: token },
+        }
+      );
+  
+      if (status === 200 || status === 201) {
+        dispatch({
+          type: "DeletePost",
+          payload: posts,
+        });
+        
+      }
+    } catch (error) {
+      console.error("deletePostService", error);
+      
     }
   };

@@ -12,7 +12,7 @@ import { DataContext } from '../../context/DataContext'
 import { AuthContext } from '../../context/AuthContext';
 import { useNavigate } from 'react-router';
 import "./postCard.css"
-import { addLikedPost, postBookmarkService, removeBookmarkService, removeLikedPost } from '../../services/PostServices';
+import { addLikedPost, getPostEditService, postBookmarkService, postDeleteService, removeBookmarkService, removeLikedPost } from '../../services/PostServices';
 import { timeAgo } from '../../Utils/Utils';
 
 export default function PostCard({post}) {
@@ -57,13 +57,13 @@ export default function PostCard({post}) {
 
  
 
-  // const postEditHandler = (postId) => {
-  //   setPostEdit(false);
-  //   getPostEditService(postId, dispatch);
-  // };
+  const postEditHandler = (postId) => {
+    setPostEdit(false);
+    getPostEditService(postId, dispatch);
+  };
 
   const postDeleteHandler = (postId) => {
-    // deletePostService(token, postId, dispatch);
+    postDeleteService(postId, token, dispatch);
   };
 
   return (
@@ -94,10 +94,10 @@ export default function PostCard({post}) {
             <span>
               <MoreHorizIcon />
             </span>
-            {/* <span className="post-settings flex-column">
+            <span className="post-settings flex-column">
               <span onClick={() => postEditHandler(postId, post)}>Edit</span>
               <span onClick={() => postDeleteHandler(postId)}>Delete</span>
-            </span> */}
+            </span>
           </div>
         )}
       </div>

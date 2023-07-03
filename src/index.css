@@ -1,13 +1,49 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --text-color-one: #333;
+  --text-color-two: #5b5b5b;
+  --text-color-three: #9a9b9a;
+  --text-color-four: #fff;
+  --text-color-highlight: #3c0ac2;
+
+  --background-color-one: #fff;
+  --background-color-two: #faf9f9;
+
+  --primary-color-one: #3c0ac2;
+  --primary-color-shade: rgba(59, 10, 194, 0.15);
+
+  --success-color: #2ecc71;
+  --error-color: #e74c3c;
+
+  --border-color-dark: #ccc;
+  --border-color-light: #eee;
+  --border-color-highlight: #3c0ac2;
+
+  --modal-overlay-bg: rgba(0, 0, 0, 0.4);
+  --header-bg-shadow: rgba(0, 0, 0, 0.05);
+  --post-card-shadow: rgba(99, 99, 99, 0.2);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+body {
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  color: var(--text-color-one);
+  background-color: var(--background-color-two);
+
+  /* If any child element has postion sticky then this  overflow-x property in parent container element doesn't work well , so we are using overflow clip but only draw back of overflow clip is that 5% of safari broswer and IE broswer do not support so for fall back we are using overflow-x hidden */
+  overflow-x: hidden;
+  overflow-x: clip;
+  
+}
+
+#root {
+  width: 100%;
 }

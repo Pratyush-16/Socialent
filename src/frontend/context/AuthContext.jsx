@@ -90,22 +90,29 @@ export const AuthContextProvider = ({ children }) => {
             user: createdUser,
           })
         );
-        // toast.success("LogIn In Successfull");
+        
         setUser(createdUser);
         setToken(encodedToken);
 
-       
+       navigate('/')
       }
     } catch (error) {
       console.log(error);
     }
   };
 
+  const logoutHandler = () => {
+    localStorage.removeItem("login");
+    setToken();
+    setUser();
+    
+  };
+
 
 
   return (
     <AuthContext.Provider
-      value={{ token, setToken, user, setUser, loginHandler,signUpHandler }}
+      value={{ token, setToken, user, setUser, loginHandler,signUpHandler, logoutHandler}}
     >
       {children}
     </AuthContext.Provider>

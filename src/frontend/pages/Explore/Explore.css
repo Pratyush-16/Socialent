@@ -1,7 +1,9 @@
 .page-container{
-    display: grid;
-    grid-template-areas: "main sidebar" ;
-    grid-template-columns: 7.5fr 2.5fr;
+  display: grid;
+  grid-template-areas: "sidebar main suggestionBar" ;
+  grid-template-columns:  2fr 5.5fr 2.5fr;
+  height: 100vh;
+  height: 100dvh;
 }
 
 .postFeed_container {

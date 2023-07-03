@@ -7,11 +7,11 @@ export default function PostList( { postListData, headerState } ) {
 
   
   return (
-    <div>
-       <header className="postFeed_container-header">
+    <div className="post-width-container">
+       {/* <header className="postFeed_container-header"> */}
 
        
-        <span> Latest posts</span>
+        {/* <span> Latest posts</span>
         <div
           style={{
             display: "flex",
@@ -25,7 +25,7 @@ export default function PostList( { postListData, headerState } ) {
           <span >Oldest</span>
           <span >Clear Filter</span>
         </div>
-      </header> 
+      </header>  */}
 
       
 

@@ -19,10 +19,10 @@ export default function Signup() {
     setSignUpData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const clickHandler = async () => {
+  const clickHandler =  () => {
     const { firstName, lastName, userName, email, password, confirmPassword } =
       signUpData;
-    let result = await signUpHandler(
+     signUpHandler(
       firstName,
       lastName,
       userName,
@@ -30,7 +30,7 @@ export default function Signup() {
       password,
       confirmPassword
     );
-    console.log(result);
+  
   };
 
   return (

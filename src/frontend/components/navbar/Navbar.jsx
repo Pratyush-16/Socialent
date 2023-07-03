@@ -5,12 +5,16 @@ import { DataContext } from '../../context/DataContext'
 import { useSearch } from '../../Utils/Utils'
 import CloseIcon from "@mui/icons-material/Close";
 import SearchIcon from "@mui/icons-material/Search";
+import { AuthContext } from '../../context/AuthContext'
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
 
 export const  Navbar =() => {
 
   const navigate = useNavigate()
 
   const{state:{userProfile}} = useContext(DataContext)
+  const {logoutHandler} = useContext(AuthContext)
 
   const { searchInput, searchHandler, searchResult, clearSearchHandler } =
   useSearch();
@@ -21,6 +25,8 @@ export const  Navbar =() => {
       : navigate(`profile/${profileId}`);
     clearSearchHandler();
   };
+
+  
   return (
 
     <div className='navabr-main-container'>
@@ -77,12 +83,15 @@ export const  Navbar =() => {
         </div>
 
         <div className='navbar-links'>
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/explore">Explore</NavLink>
-            <NavLink to="/bookmarks">Bookmarks</NavLink>
-            <NavLink to="/likedpost">LikedPost</NavLink>
-            <NavLink to={`profile/${userProfile?._id}`}>Profile</NavLink>
-            <NavLink to="/logout">Logout</NavLink>
+            
+
+            <span>
+              <DarkModeIcon/>
+            </span>
+           
+           <span onClick={logoutHandler}>
+            <LogoutOutlinedIcon/>
+           </span>
         </div>
          
       

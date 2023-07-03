@@ -4,6 +4,8 @@ import { Navbar } from '../../components/Navbar/Navbar'
 import PostCard from '../../components/PostCard/PostCard'
 import PostList from '../../components/PostList/PostList'
 import { DataContext } from '../../context/DataContext'
+import SideBar from '../../components/Sidebar/Sidebar'
+import SuggestionBar from '../../components/SuggestionBar/SuggestionBar'
 
 export default function Explore() {
 
@@ -12,10 +14,22 @@ export default function Explore() {
 
   return (
 
-    <div className="postFeed_container" >
+    <div className="page-container">
+
+     <aside >
+        <SideBar/>
+      </aside>
        
 
+       <div className="postFeed_container">
        <PostList postListData={posts}/>
+       </div>
+
+       
+
+       <aside >
+        <SuggestionBar/>
+      </aside>
       
     </div>
   )

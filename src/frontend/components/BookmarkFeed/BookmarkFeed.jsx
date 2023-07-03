@@ -8,8 +8,8 @@ export default function BookmarkFeed() {
 
     const bookmarksList = userProfile?.bookmarks;
 
-    console.log(bookmarksList
-      )
+    // console.log(bookmarksList
+    //   )
 
 
   return (

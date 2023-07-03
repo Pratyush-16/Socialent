@@ -19,6 +19,9 @@ export default function ProfilePage() {
   return (
     <div>
 
+      <div>
+        </div>
+
         <ProfileFeed/>
 
         <PostList postListData={userPosts} headerState={"Profile"} />

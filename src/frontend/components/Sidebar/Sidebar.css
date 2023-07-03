@@ -1,4 +1,125 @@
-.suggestion_container {
+.sideBar_container {
+  grid-area: sidebar ;
+  width: 100%;
+  padding: 2rem 1rem;
+  height: fit-content;
+}
+
+.sideBar_container-list {
+  gap: 2rem;
+}
+
+.sideBar_container-listItem {
+  width: 100%;
+  transition: all 0.1s;
+}
+
+.sideBar_container-listItem:hover {
+  border-radius: 1rem;
+  background-color: var(--primary-color-shade);
+}
+
+.sideBar_container-listItem:last-child:hover {
+  border-radius: 1rem;
+  background-color: transparent;
+}
+
+.sideBar_container-listItem a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  text-decoration: none;
+  padding: 0.5rem 1.6rem;
+  border-radius: 1rem;
+  color: initial;
+  width: 100%;
+}
+
+.sideBar_container-listItem a.active {
+  background-color: var(--primary-color-shade);
+}
+
+.sideBar_container-listItem a.active:hover {
+  background-color: transparent;
+}
+
+.sideBar_container-listItem span {
+  font-size: 1.7rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  color: var(--text-color-one);
+}
+
+.sideBar_container-listItem svg {
+  font-size: 2.8rem;
+}
+
+.sideBar_container-listItem .postBtn {
+  padding: 0.4rem 2.5rem;
+  border-radius: 8px;
+  color: var(--text-color-four);
+}
+
+.sideBar_container-listItem .home,
+.sideBar_container-listItem .explore,
+.sideBar_container-listItem .bookmark,
+.sideBar_container-listItem .likeposts,
+.sideBar_container-listItem .profile {
+  display: inline-block;
+}
+
+/*  1200px === 75em  */
+@media (max-width: 75em) {
+  .sideBar_container {
+    padding: 2rem 0.5rem;
+  }
+
+  .sideBar_container-listItem a {
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: 0.8rem;
+  }
+
+  .sideBar_container-listItem:hover,
+  .sideBar_container-listItem:last-child:hover {
+    border-radius: 0.8rem;
+  }
+
+  .sideBar_container-listItem .postBtn {
+    padding: 0.4rem 1rem;
+    border-radius: 8px;
+  }
+
+  .sideBar_container-listItem .home,
+  .sideBar_container-listItem .explore,
+  .sideBar_container-listItem .bookmarks,
+  .sideBar_container-listItem .likeposts,
+  .sideBar_container-listItem .profile {
+    display: none;
+  }
+}
+
+/*  768px === 45em  */
+@media (max-width: 48em) {
+  .sideBar_container-listItem .postBtn {
+    font-size: 1.65srem;
+  }
+}
+
+/*  544px === 34em  */
+@media (max-width: 34em) {
+  .sideBar_container {
+    display: none;
+  }
+}
+
+
+
+
+/* .suggestion_container {
     display: block;
     width: 100%;
     grid-area: suggestion;
@@ -73,5 +194,6 @@
     .suggestion_container {
       display: none;
     }
-  }
-  
+  } 
+
+
