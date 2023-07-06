@@ -23,6 +23,15 @@
   --post-card-shadow: rgba(99, 99, 99, 0.2);
 }
 
+
+
+  /* --background-color-one: #202945;
+  --background-color-two: #152028;
+
+  --primary-color-one: #6200ee;
+  --primary-color-shade: rgb(98, 0, 238, 0.4); */
+
+
 *,
 *::before,
 *::after {
@@ -41,7 +50,7 @@ body {
   /* If any child element has postion sticky then this  overflow-x property in parent container element doesn't work well , so we are using overflow clip but only draw back of overflow clip is that 5% of safari broswer and IE broswer do not support so for fall back we are using overflow-x hidden */
   overflow-x: hidden;
   overflow-x: clip;
-  
+
 }
 
 #root {
