@@ -1,0 +1,53 @@
+.main-landing-container{
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    justify-content: center;
+    padding: 15rem;
+
+}
+.heading{
+  width: 50%;
+}
+
+.home-title{
+    margin-bottom: 2rem;
+    margin-left: 20%;
+    color: #EA580C;
+
+}
+
+.sub-heading{
+
+    /* display: flex; */
+    /* flex-direction: row; */
+    gap: 1.2rem;
+}
+
+.main-sub-heading{
+  font-size: 2rem;
+  color: #9FBCDD;
+}
+
+.suffix-title{
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.button1{
+    margin-top: 2rem;
+    background-color: #EA580C;
+    padding: 0.5rem 1rem;
+    width: 70%;
+    border: none;
+    cursor: pointer;
+}
+
+.button2{
+margin-top: 1rem;
+color: #EA580C;
+}
+
+.image-container{
+    width: 50%;
+}
