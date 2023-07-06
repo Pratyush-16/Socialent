@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import "./Signup.css"
 import { AuthContext } from "../../context/AuthContext";
 
 export default function Signup() { 
@@ -34,7 +35,10 @@ export default function Signup() {
   };
 
   return (
-    <div>
+    <div className="container"> 
+      
+      <div className="signup-body">
+
       <label htmlFor="FirstName">
         FirstName :
         <input
@@ -102,6 +106,7 @@ export default function Signup() {
       </label>
 
       <button onClick={clickHandler}>Submit</button>
+      </div>
     </div>
   );
 }
