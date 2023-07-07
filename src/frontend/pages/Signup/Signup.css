@@ -3,40 +3,37 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    
   }
-.signup-body{
+  
+  .signup-body {
     display: flex;
     flex-direction: column;
-   align-items: center;
-   margin-top: 60px;
- height: 100vh;
-  gap: 1.5rem;
- 
-}
-
-.signup-body {
-    display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    width: 300px;
+    height: 400px;
+    gap: 10px;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   }
   
   label {
     display: flex;
     flex-direction: column;
-    margin-bottom: 10px;
   }
   
   input {
     padding: 5px;
-    border-radius: 4px;
     border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
   }
-
+  
   button {
-    padding: 10px 20px;
-    margin-top: 10px;
+    padding: 10px;
     background-color: #4caf50;
-    color: #fff;
+    color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -45,3 +42,4 @@
   button:hover {
     background-color: #45a049;
   }
+  

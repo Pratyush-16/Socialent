@@ -40,7 +40,13 @@ export default function Login() {
 
 
   return (
+
+    <div className='login-container'>
+
+    
     <div  className='login-form-container'>
+
+      <h2>Login</h2>
       
       <label htmlFor="UserName">UserName :
         <input type='text' 
@@ -63,6 +69,7 @@ export default function Login() {
       <button onClick={testLoginHandler}>Guest Login</button>
       
       
+    </div>
     </div>
   )
 }
