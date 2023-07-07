@@ -4,11 +4,18 @@ import { AuthContext } from "../../context/AuthContext";
 import { DataContext } from "../../context/DataContext";
 import { postDataFunction } from "../../Utils/Utils";
 import { addNewPostFunc } from "../../Utils/Utils";
+import { useRef } from "react";
+import AddPhotoAlternateOutlinedIcon from '@mui/icons-material/AddPhotoAlternateOutlined';
+
+
 export default function AddPost  () {
+
   const [newPostData, setNewPostData] = useState({
     message: "",
-    files: [],
+    postImage: [],
   });
+
+  const inputRef = useRef()
 
   const { token } = useContext(AuthContext);
 
@@ -29,7 +36,7 @@ export default function AddPost  () {
     <div className="addPost_container flex-column">
       <div className="addPost_InfoContainer ">
         <div className="addPost_ImgContainer">
-          <img src={userProfile?.profileImage} alt="profile" />
+          <img height={"50px"} width={"50px"} src={userProfile?.profileImage} alt="profile" />
         </div>
         <div className="addPost_message">
           <label htmlFor="addPostMessage"></label>
@@ -50,6 +57,10 @@ export default function AddPost  () {
         
         <div className="addPost_footer">
           
+          <AddPhotoAlternateOutlinedIcon onClick={()=> inputRef.current.click() }/ >
+          <div className="image-add-post">
+              <input  type="file"  ref={inputRef} onChange={(e) => setNewPostData({...newPostData , postImage:[...newPostData?.postImage,URL.createObjectURL(e.target.files[0])]})} />
+          </div>
 
           <button onClick={addNewPostHandler} className="btn postBtn">
             Post

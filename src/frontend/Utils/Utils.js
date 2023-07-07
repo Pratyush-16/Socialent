@@ -64,7 +64,7 @@ export const useSearch = () => {
 
 
 export const addNewPostFunc = (newPostData, setNewPostData, token, dispatch) => {
-    newPostData.message.length > 1 &&
+    newPostData.message?.length > 1 &&
       addNewPostService(token, newPostData, dispatch);
       setNewPostData({
         message: "",

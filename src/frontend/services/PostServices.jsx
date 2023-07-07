@@ -1,6 +1,7 @@
 import axios from "axios";
 
 export const addNewPostService = async (token, post, dispatch) => {
+ 
   try {
     const {
       status,
@@ -16,6 +17,7 @@ export const addNewPostService = async (token, post, dispatch) => {
     );
 
     if (status === 200 || status === 201) {
+      console.log(post, "addedpost")
       dispatch({
         type: "addNewPost",
         payload: {
