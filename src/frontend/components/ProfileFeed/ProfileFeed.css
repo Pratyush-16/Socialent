@@ -70,8 +70,8 @@
   }
   
   .profile-edit:hover {
-    color: var(--secondary-color-one);
-    background-color: var(--primary-color-one);
+    color: black;
+    background-color:  #516395;
   }
   
   .profile_details-partThree {

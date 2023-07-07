@@ -28,5 +28,15 @@
     gap: 2rem;
     padding-bottom: 2rem;
   }
+
+  /* @media screen and (min-width: 601px) {
+    .page-container {
+      flex-wrap: nowrap;
+    }
   
+    .page-container aside,
+    .page-container .postFeed_container {
+      width: 50%;
+    }
+  } */
 

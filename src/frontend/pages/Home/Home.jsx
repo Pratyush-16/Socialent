@@ -22,6 +22,13 @@ export default function Home() {
       </aside>
       <div className="postFeed_container">
         <AddPost />
+        <hr/>
+        <div>
+        <button>Trending</button>
+        <button>Latest</button>
+        <button>Oldest</button> 
+        </div>
+        
 
         <PostList postListData={posts} />
       </div>
