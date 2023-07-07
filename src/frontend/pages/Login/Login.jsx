@@ -15,12 +15,12 @@ export default function Login() {
 
     const loginClickHandler =(e)=>{
         const {name, value} = e.target;
-       // console.log(e.target)
+       
         setLoginDetails({...loginDetails,[name]: value})
        
     }
-
-    // console.log(loginDetails)
+    
+    
     
     const clickHandler =(e)=> {
         const {username, password} = loginDetails;       
@@ -53,20 +53,22 @@ export default function Login() {
         name='username'
         value={loginDetails.username}
         onChange={loginClickHandler}
-        placeholder='username'/>
+        placeholder='PratyushSingh'/>
       </label>
 
       <label htmlFor="Password">Password :
-        <input type='text'
+        <input type='password'
         name='password'
         value={loginDetails.password}
         onChange={loginClickHandler}
-        placeholder='password' />
+        placeholder='*******' />
       </label>
 
       <button onClick={clickHandler }>Submit</button>
 
       <button onClick={testLoginHandler}>Guest Login</button>
+
+      <p onClick={()=> navigate('/signup')}> New User ? Create New Account</p>
       
       
     </div>

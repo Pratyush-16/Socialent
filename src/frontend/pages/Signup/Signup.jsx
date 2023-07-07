@@ -1,8 +1,11 @@
 import React, { useContext, useState } from "react";
 import "./Signup.css"
 import { AuthContext } from "../../context/AuthContext";
+import { useNavigate } from "react-router";
 
 export default function Signup() { 
+
+  const navigate = useNavigate();
   
   const [signUpData, setSignUpData] = useState({
     firstName: "",
@@ -38,6 +41,8 @@ export default function Signup() {
     <div className="container"> 
       
       <div className="signup-body">
+
+        <h2>Sign Up</h2>
 
       <label htmlFor="FirstName">
         FirstName :
@@ -106,7 +111,11 @@ export default function Signup() {
       </label>
 
       <button onClick={clickHandler}>Submit</button>
+
+      <p onClick={()=> navigate('/login')}> Already have an account ? Login.</p>
       </div>
+    
+      
     </div>
   );
 }
