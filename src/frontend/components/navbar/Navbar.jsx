@@ -32,7 +32,7 @@ export const  Navbar =() => {
     <div className='navabr-main-container'>
 
 
-        <span className='title'>My Socials</span>
+        <span className='title' onClick={()=> navigate('/')}>My Socials</span>
 
         <div className="nav_search flex-center">
           <label htmlFor="searchInput">
