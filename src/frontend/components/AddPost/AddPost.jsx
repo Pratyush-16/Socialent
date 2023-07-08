@@ -64,7 +64,7 @@ export default function AddPost  () {
 
           <button onClick={addNewPostHandler} className="btn postBtn">
             Post
-          </button>
+          </button> 
         </div>
       </div>
     </div>
