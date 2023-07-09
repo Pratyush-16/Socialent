@@ -115,6 +115,9 @@ export default function Signup() {
       <p onClick={()=> navigate('/login')}> Already have an account ? Login.</p>
       </div>
     
+      <div className='image-container'>
+          <img src="https://i.postimg.cc/wTZ41mnQ/social-media.png" alt="" />
+        </div>
       
     </div>
   );
