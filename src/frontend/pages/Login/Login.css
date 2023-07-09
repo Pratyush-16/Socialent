@@ -3,6 +3,7 @@
   justify-content: center;
   align-items: center;
   height: 90vh;
+  background-color: #bcd3f5;
 }
 .login-form-container {
   display: flex;
