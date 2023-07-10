@@ -14,7 +14,7 @@
 .home-title{
     margin-bottom: 2rem;
     margin-left: 20%;
-    color: #EA580C;
+    color: black;
 
 }
 
@@ -27,7 +27,7 @@
 
 .main-sub-heading{
   font-size: 2rem;
-  color: #9FBCDD;
+  color: black;
 }
 
 .suffix-title{
@@ -37,7 +37,7 @@
 
 .button1{
     margin-top: 2rem;
-    background-color: #EA580C;
+    background-color: black;
     padding: 0.5rem 1rem;
     width: 70%;
     border: none;
@@ -46,7 +46,7 @@
 
 .button2{
 margin-top: 1rem;
-color: #EA580C;
+color: black;
 }
 
 .image-container{

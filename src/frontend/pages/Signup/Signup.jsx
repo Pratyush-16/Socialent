@@ -91,7 +91,7 @@ export default function Signup() {
       <label htmlFor="Password">
         Password :
         <input
-          type="text"
+          type="password"
           name="password"
           value={signUpData.password}
           placeholder="password"
@@ -102,7 +102,7 @@ export default function Signup() {
       <label htmlFor="ConfirmPassword">
         Confirm Password :
         <input
-          type="text"
+          type="password"
           name="confirmPassword"
           placeholder=" confirm password"
           value={signUpData.confirmPassword}
