@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import "../Navbar/Navbar.css"
-import { NavLink, useNavigate } from 'react-router-dom'
+import {  useNavigate } from 'react-router-dom'
 import { DataContext } from '../../context/DataContext'
 import { useSearch } from '../../Utils/Utils'
 import CloseIcon from "@mui/icons-material/Close";
