@@ -52,7 +52,7 @@ if (
           path="/"
           element={
             <RequireAuth>
-               <Navbar />
+               <navbar />
               <Home />
             </RequireAuth>
           }
@@ -61,7 +61,7 @@ if (
           path="/explore"
           element={
             <RequireAuth>
-               <Navbar />
+               <navbar />
               <Explore />
             </RequireAuth>
           }
@@ -70,7 +70,7 @@ if (
           path="/bookmarks"
           element={
             <RequireAuth>
-               <Navbar />
+               <navbar />
               <Bookmarks />
             </RequireAuth>
           }
@@ -79,7 +79,7 @@ if (
           path="/likedpost"
           element={
             <RequireAuth>
-               <Navbar />
+               <navbar />
               <LikedPost />
             </RequireAuth>
           }
@@ -88,7 +88,7 @@ if (
           path="/profile/:profileId"
           element={
             <RequireAuth>
-               <Navbar />
+               <navbar />
               <ProfilePage />
             </RequireAuth>
           }
