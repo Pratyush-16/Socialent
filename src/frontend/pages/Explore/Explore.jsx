@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import "./Explore.css"
-import { Navbar } from '../../components/Navbar/Navbar'
+import { Navbar } from '../../components/navbar/Navbar'
 import PostCard from '../../components/PostCard/PostCard'
 import PostList from '../../components/PostList/PostList'
 import { DataContext } from '../../context/DataContext'

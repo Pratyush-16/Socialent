@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import "../Navbar/Navbar.css"
+import "../navbar/Navbar.css"
 import {  useNavigate } from 'react-router-dom'
 import { DataContext } from '../../context/DataContext'
 import { useSearch } from '../../Utils/Utils'

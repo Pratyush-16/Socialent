@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import "./Home.css";
-import { Navbar } from "../../components/Navbar/Navbar";
+import { Navbar } from "../../components/navbar/Navbar";
 
 import { getAllPost } from "../../services/DataServices";
 import PostCard from "../../components/PostCard/PostCard";
