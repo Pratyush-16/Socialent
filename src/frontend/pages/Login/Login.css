@@ -4,6 +4,7 @@
   align-items: center;
   height: 90vh;
   background-color: #bcd3f5;
+  gap: 5rem;
 }
 .login-form-container {
   display: flex;

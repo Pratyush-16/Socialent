@@ -72,6 +72,10 @@ export default function Login() {
       
       
     </div>
+
+    <div className='image-container'>
+          <img src="https://i.postimg.cc/wTZ41mnQ/social-media.png" alt="" />
+        </div>
     </div>
   )
 }

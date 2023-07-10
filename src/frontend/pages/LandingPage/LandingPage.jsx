@@ -12,7 +12,7 @@ export default function LandingPage() {
     <div className='main-landing-container'>
 
       <div className='heading'>
-      <h1 className='home-title'> MY Socials</h1>
+      <h1 className='home-title'>Socialent</h1>
      
 
 
