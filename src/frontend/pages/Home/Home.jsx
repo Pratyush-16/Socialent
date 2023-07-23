@@ -12,7 +12,7 @@ import SuggestionBar from "../../components/SuggestionBar/SuggestionBar";
 
 export default function Home() {
   const {
-    state: { posts },
+    state: { posts },dispatch
   } = useContext(DataContext);
 
   return (
@@ -24,9 +24,9 @@ export default function Home() {
         <AddPost />
         <hr/>
         <div>
-        <button>Trending</button>
-        <button>Latest</button>
-        <button>Oldest</button> 
+        <button onClick={()=> dispatch({type: "filterApplied", payload: "Trending"})}>Trending</button>
+        <button onClick={()=> dispatch({type: "filterApplied", payload: "Latest"})}>Latest</button>
+        <button onClick={()=> dispatch({type: "filterApplied", payload: "Oldest"})}>Oldest</button> 
         </div>
         
 

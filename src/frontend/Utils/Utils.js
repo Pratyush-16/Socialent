@@ -121,5 +121,30 @@ export const addNewPostFunc = (newPostData, setNewPostData, token, dispatch) => 
           };
         }, [dropBoxstate, refState, setDropBoxState]);
       };
+
+
+      export const userFeedPost = (posts, filterType, userFollowing, userInfo) => {
+        //console.log(posts, filterType, userFollowing, userInfo ,"many console")
+        let finaluserfeed = posts.filter(
+          (post) =>
+            userFollowing.includes(post.username) ||
+            post.username === userInfo.username
+        );
+        if (filterType === 'Trending') {
+          finaluserfeed = [...finaluserfeed].sort(
+            (a, b) => b.likes.likeCount - a.likes.likeCount
+          );
+        } else {
+          finaluserfeed =
+            filterType === 'Oldest'
+              ? [...finaluserfeed].sort(
+                  (a, b) => new Date(a.createdAt) - new Date(b.createdAt)
+                )
+              : [...finaluserfeed].sort(
+                  (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+                );
+        }
+        return finaluserfeed;
+      };
       
       

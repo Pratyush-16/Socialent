@@ -1,7 +1,9 @@
+const localStorageToken = JSON.parse(localStorage.getItem("login"));
+
 export const initialState = {
     posts:[],
     users:[],
-    userProfile:{},
+    userProfile:localStorageToken?.user,
     
     profileModalDetails: null ,
     isPostModalOpen: false,
@@ -9,6 +11,7 @@ export const initialState = {
   isPostEdited: false,
   isProfileModalOpen: false,
   profileModalDetails: null,
+  filterApplied: "Latest"
 }
 
 export const dataReducer = (state,action)=> {
@@ -245,6 +248,9 @@ export const dataReducer = (state,action)=> {
                 };
               }
 
+
+              case "filterApplied":
+                return {...state, filterApplied: action.payload}
           
 
 

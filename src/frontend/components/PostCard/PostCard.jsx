@@ -66,7 +66,7 @@ export default function PostCard({post}) {
     postDeleteService(postId, token, dispatch);
   };
 
-  console.log(post,"checkpost")
+  //console.log(post,"checkpost")
   return (
     <li className="feedListItem flex-column">
       <div className="feedListItem_header ">
